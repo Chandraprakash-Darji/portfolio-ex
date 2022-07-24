@@ -1,0 +1,9 @@
+.NavBar .navItem {
+    @apply relative py-3 pl-[1rem] pr-[4rem]  hover:text-primary cursor-pointer transition-all duration-500  after:absolute after:top-0 after:border-transparent after:hover:border-primary after:border-0 after:hover:border after:hover:w-full after:h-full after:left-1/2 after:hover:left-0 after:w-0 after:transition-all after:duration-[400ms];
+}
+.NavBar .navItem.left {
+    @apply sm:pl-0 sm:pr-[5rem] hover:px-10;
+}
+.NavBar .navItem.right {
+    @apply sm:pl-[5rem] sm:pr-0 hover:px-10 text-right;
+}

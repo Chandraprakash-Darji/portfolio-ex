@@ -1,0 +1,84 @@
+.downloadCVWrapper {
+    @apply mt-28 h-72 aspect-square border-white border-2 rounded-full text-primary relative;
+}
+
+.downloadCVWrapper .CV:hover {
+    @apply text-dark;
+}
+.downloadCVWrapper .CV:hover + .popBox {
+    @apply w-full h-full;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.downloadCVWrapper .arc {
+    @apply absolute rounded-full border-transparent  before:h-3 before:w-3 before:bg-main before:absolute before:rounded-full  after:h-3 after:w-3 after:bg-main after:absolute after:rounded-full;
+}
+.downloadCVWrapper .arc-1 {
+    @apply -left-[5%] -top-[5%] w-[110%] h-[110%] border-r-main border-2  before:top-10 before:right-9 after:bottom-10 after:right-9;
+    animation: spin 2s linear infinite;
+}
+.downloadCVWrapper .arc-2 {
+    @apply -left-[10%] -top-[10%] w-[120%] h-[120%] border-l-main border-2 before:top-10 before:left-12 after:bottom-10 after:left-12;
+    animation: spin 1.8s linear infinite;
+}
+.downloadCVWrapper .arc-3 {
+    @apply -left-[15%] -top-[15%] w-[130%] h-[130%] border-t-main border-2 before:left-11 before:top-12 after:right-11 after:top-12;
+    animation: spin 1.6s linear infinite;
+}
+#home .curveLine {
+    @apply h-[40rem] w-1/2  absolute top-[19rem] -left-[5rem];
+}
+
+#home .curveLine path {
+    fill: transparent;
+    stroke-width: 5;
+    stroke: #00ff94;
+    stroke-dasharray: 1400;
+    stroke-dashoffset: -1400;
+}
+#home .curveLine path {
+    animation: animatePath 1.5s linear forwards;
+}
+@keyframes animatePath {
+    0% {
+        stroke-dashoffset: 1400;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+#home .curveLine .textInSvg {
+    opacity: 0;
+    animation: translatetext 0.3s ease-out forwards 0.7s;
+    transform: translate(300px, 552px);
+}
+@keyframes translatetext {
+    0% {
+        opacity: 0;
+        transform: translate(300px, 552px);
+    }
+    50% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 100;
+        transform: translate(410px, 552px);
+    }
+}
+#home .curveLine #Group_2 {
+    opacity: 0;
+    animation: animateOpacity 0.3s ease-out forwards 1.5s;
+}
+
+@keyframes animateOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
