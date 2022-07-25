@@ -31,6 +31,7 @@ const Home = () => {
                 </h1>
                 <AnimatedText
                     as="p"
+                    speed={40}
                     classname="md:text-xl lg:text-2xl xl:text-3xl text-primary before:content-['<p>'] before:text-mainDark after:content-['</p>'] after:text-mainDark "
                     text={"Frontend Developer // UI Designer"}
                 ></AnimatedText>

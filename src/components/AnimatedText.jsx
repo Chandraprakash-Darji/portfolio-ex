@@ -6,6 +6,7 @@ const AnimatedText = ({ text, speed, delay, classname, as }) => {
     const [count, setCount] = useState(0);
 
     const Speed = speed || 50;
+    const CharSpeed = Speed < 50 ? Speed - 20 : 50;
     const Component = as || "span";
     useEffect(() => {
         let intervalForText, intervalForRanChar;
@@ -23,7 +24,7 @@ const AnimatedText = ({ text, speed, delay, classname, as }) => {
             setRandomChar(
                 () => charText[Math.floor(Math.random() * charText.length)]
             );
-        }, 50);
+        }, CharSpeed);
         return () => {
             clearInterval(intervalForText);
             clearInterval(intervalForRanChar);
