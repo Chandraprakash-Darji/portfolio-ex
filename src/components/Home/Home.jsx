@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <section
             id="home"
-            className="container mx-auto flex flex-col md:flex-row pt-8 md:pt-20 lg:gap-10 select-none relative pb-16 lg:pb-0 sm:text-xl md:justify-between
+            className="container mx-auto flex flex-col md:flex-row pt-8 md:pt-20 xl:pt-24 2xl:pt-28 lg:gap-10 select-none relative pb-16 lg:pb-0 sm:text-xl md:justify-between
             min-h-[calc(100vh_-_var(--x))]"
         >
             <div className="flex flex-col gap-3 md:gap-5 lg:gap-10 px-3">
@@ -21,6 +21,7 @@ const Home = () => {
                     classname="md:text-xl lg:text-2xl xl:text-3xl text-primary before:content-['<p>_'] before:text-mainDark after:content-['_</p>'] after:text-mainDark "
                     text="I am"
                     as={"p"}
+                    delay={10}
                 />
                 <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-[6rem] py-10 pl-10 lg:pl-20 relative before:content-['<h1>'] before:text-mainDark after:content-['</h1>'] after:text-mainDark before:text-base lg:before:text-3xl after:text-base lg:after:text-3xl before:absolute before:left-5 lg:before:left-10 before:top-3 lg:before:top-0 after:absolute after:bottom-3 lg:after:bottom-0  after:left-5 lg:after:left-10 leading-[1.1] after:font-sans after:not-italic after:font-normal before:not-italic before:font-normal before:font-sans magic-vanishIn font-bold italic font-Hack">
                     Chandra
@@ -31,7 +32,6 @@ const Home = () => {
                 </h1>
                 <AnimatedText
                     as="p"
-                    speed={40}
                     classname="md:text-xl lg:text-2xl xl:text-3xl text-primary before:content-['<p>'] before:text-mainDark after:content-['</p>'] after:text-mainDark "
                     text={"Frontend Developer // UI Designer"}
                 ></AnimatedText>
