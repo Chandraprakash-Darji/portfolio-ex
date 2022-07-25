@@ -1,6 +1,6 @@
 import "./NavBar.css";
 import { createContext, useContext, useEffect, useState } from "react";
-
+import AnimatedText from "../AnimatedText";
 const menuOoptions = [
     {
         id: 101,
@@ -93,7 +93,9 @@ const NavItem = ({ href, cls, children }) => {
     const { setOpenState } = useContext(openContext);
     return (
         <li className={"navItem " + cls} onClick={() => setOpenState(false)}>
-            <a href={href}>{children}</a>
+            <a href={href}>
+                <AnimatedText as="" text={children} />
+            </a>
         </li>
     );
 };
