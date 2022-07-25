@@ -1,5 +1,5 @@
 .downloadCVWrapper {
-    @apply mt-28 h-72 aspect-square border-white border-2 rounded-full text-primary relative;
+    @apply mx-auto h-56 mt-36 md:mt-16 lg:mt-28 xl:mt-16 lg:h-72 aspect-square border-white border-2 rounded-full text-primary relative;
 }
 
 .downloadCVWrapper .CV:hover {
@@ -17,19 +17,19 @@
     @apply absolute rounded-full border-transparent  before:h-3 before:w-3 before:bg-main before:absolute before:rounded-full  after:h-3 after:w-3 after:bg-main after:absolute after:rounded-full;
 }
 .downloadCVWrapper .arc-1 {
-    @apply -left-[5%] -top-[5%] w-[110%] h-[110%] border-r-main border-2  before:top-10 before:right-9 after:bottom-10 after:right-9;
+    @apply -left-[5%] -top-[5%] w-[110%] h-[110%] border-r-main border-2 before:top-7 before:right-7 after:bottom-7 after:right-7 lg:before:top-10 lg:before:right-10 lg:after:bottom-10 lg:after:right-10;
     animation: spin 2s linear infinite;
 }
 .downloadCVWrapper .arc-2 {
-    @apply -left-[10%] -top-[10%] w-[120%] h-[120%] border-l-main border-2 before:top-10 before:left-12 after:bottom-10 after:left-12;
+    @apply -left-[10%] -top-[10%] w-[120%] h-[120%] border-l-main border-2 before:top-9 before:left-7 after:bottom-9 after:left-7 lg:before:top-10 lg:before:left-11 lg:after:bottom-10 lg:after:left-11;
     animation: spin 1.8s linear infinite;
 }
 .downloadCVWrapper .arc-3 {
-    @apply -left-[15%] -top-[15%] w-[130%] h-[130%] border-t-main border-2 before:left-11 before:top-12 after:right-11 after:top-12;
+    @apply -left-[15%] -top-[15%] w-[130%] h-[130%] border-t-main border-2 before:left-8 before:top-9 after:right-8 after:top-9 lg:before:left-12 lg:before:top-11 lg:after:right-12 lg:after:top-11 ;
     animation: spin 1.6s linear infinite;
 }
 #home .curveLine {
-    @apply h-[40rem] w-1/2  absolute top-[19rem] -left-[5rem];
+    @apply hidden md:block h-[30rem] lg:h-[34rem] xl:h-[40rem] 2xl:h-[50rem] aspect-square  absolute top-[13rem] lg:top-[16rem] -left-[3rem] lg:-left-[2rem] xl:top-[17rem] xl:-left-[3rem];
 }
 
 #home .curveLine path {
@@ -81,4 +81,4 @@
     100% {
         opacity: 100;
     }
-}
+} 
