@@ -10,10 +10,8 @@ const AnimatedText = ({ text, speed, delay, classname }) => {
             setRandomChar("");
             return;
         }
-        console.log("eait");
         intervalForText = setInterval(() => {
             setRenderText(() => `${renderText}${text[count]}`);
-            console.log(renderText, text);
             setCount((prev) => prev + 1);
         }, speed);
 

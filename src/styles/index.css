@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("./hack-subset.css");
+@import url("./hack.css");
+@font-face {
+    font-family: "Grestal Script DEMO Regular";
+    src: url("../assets/fonts/grestal_script/0b20bf09bb1c168ea91b40f94974ab58.eot"); /* IE9*/
+    src: url("../assets/fonts/grestal_script/0b20bf09bb1c168ea91b40f94974ab58.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */
+            url("../assets/fonts/grestal_script/0b20bf09bb1c168ea91b40f94974ab58.woff2")
+            format("woff2"),
+        /* chrome、firefox */
+            url("../assets/fonts/grestal_script/0b20bf09bb1c168ea91b40f94974ab58.woff")
+            format("woff"),
+        /* chrome、firefox */
+            url("../assets/fonts/grestal_script/0b20bf09bb1c168ea91b40f94974ab58.ttf")
+            format("truetype"),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url("../assets/fonts/grestal_script/0b20bf09bb1c168ea91b40f94974ab58.svg#Grestal Script DEMO Regular")
+            format("svg"); /* iOS 4.1- */
+}
+
+::-webkit-scrollbar {
+    background-color: #2d2d35;
+    width: 0.4rem;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #16b170;
+}

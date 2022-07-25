@@ -11,6 +11,7 @@ module.exports = {
             },
             fontFamily: {
                 Hack: ["Hack", ...defaultTheme.fontFamily.sans],
+                Grestal: ["Grestal Script DEMO Regular", "cursive"],
             },
         },
     },

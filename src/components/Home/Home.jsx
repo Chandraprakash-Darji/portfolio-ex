@@ -8,13 +8,13 @@ const Home = () => {
         const Home = document.getElementById("home");
         const navheight = NavBar.getBoundingClientRect().height;
         Home.style.setProperty("--x", navheight + "px");
-        Home.style.minHeight = `calc(100vh - var(--x))`;
     }, []);
 
     return (
         <section
             id="home"
-            className="container mx-auto flex flex-col md:flex-row pt-8 md:pt-20 lg:gap-10 select-none relative pb-16 lg:pb-0 sm:text-xl md:justify-between"
+            className="container mx-auto flex flex-col md:flex-row pt-8 md:pt-20 lg:gap-10 select-none relative pb-16 lg:pb-0 sm:text-xl md:justify-between
+            min-h-[calc(100vh_-_var(--x))]"
         >
             <div className="flex flex-col gap-3 md:gap-5 lg:gap-10 px-3">
                 <p className="md:text-xl lg:text-2xl xl:text-3xl text-primary before:content-['<p>_'] before:text-mainDark after:content-['_</p>'] after:text-mainDark ">

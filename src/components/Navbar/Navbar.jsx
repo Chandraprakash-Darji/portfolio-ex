@@ -54,16 +54,9 @@ const Navbar = () => {
                                 ))}
                         </ul>
                     </nav>
-                    <figure className="h-16 md:h-[5rem] aspect-square p-2 md:p-0">
-                        <a href="#home">
-                            <img
-                                src={logo}
-                                
-                                alt="CP"
-                                className="h-full aspect-square"
-                            />
-                        </a>
-                    </figure>
+                    <div className="font-Grestal text-[3rem] flex justify-center items-center px-3 md:px-0 md:text-[5rem]">
+                        <a href="#home">CP</a>
+                    </div>
                     <button
                         className="w-16 aspect-square flex justify-center items-center p-2 cursor-pointer sm:hidden"
                         onClick={() => setOpenState((prev) => !prev)}
