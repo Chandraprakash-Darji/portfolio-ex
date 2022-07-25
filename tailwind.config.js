@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
@@ -7,6 +8,9 @@ module.exports = {
                 primary: "#00ff94",
                 main: "#ffffff",
                 mainDark: "#606061",
+            },
+            fontFamily: {
+                Hack: ["Hack", ...defaultTheme.fontFamily.sans],
             },
         },
     },
