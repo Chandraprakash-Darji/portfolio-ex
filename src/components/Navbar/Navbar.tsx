@@ -4,29 +4,35 @@ import AnimatedText from "../AnimatedText";
 const menuOoptions = [
     {
         id: 101,
-        children: "//01 <Home/>",
+        text: "//01 <Home/>",
         href: "#home",
     },
     {
         id: 102,
-        children: "//02 <AboutMe/>",
+        text: "//02 <AboutMe/>",
         href: "#aboutme",
     },
     {
         id: 103,
-        children: "//03 <MyProjects/>",
+        text: "//03 <MyProjects/>",
         href: "#myprojects",
     },
 
     {
         id: 104,
-        children: "//04 <Contact/>",
+        text: "//04 <Contact/>",
         href: "#contact",
     },
 ];
-const openContext = createContext({
+
+interface OpenContextProps {
+    openState: boolean;
+    setOpenState: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const OpenContext = createContext<OpenContextProps>({
     openState: false,
-    setOpenState: (state) => {},
+    setOpenState: () => {},
 });
 
 const Navbar = () => {
@@ -36,7 +42,7 @@ const Navbar = () => {
     }, [openState]);
 
     return (
-        <openContext.Provider value={{ openState, setOpenState }}>
+        <OpenContext.Provider value={{ openState, setOpenState }}>
             <header className="NavBar md:text-lg select-none">
                 <div
                     className="bg-dark z-50 min-w-screen container mx-auto flex justify-between items-center py-8"
@@ -46,10 +52,13 @@ const Navbar = () => {
                         <ul className="flex flex-col gap-2">
                             {menuOoptions
                                 .slice(0, 2)
-                                .map(({ id, href, children }) => (
-                                    <NavItem key={id} href={href} cls="left">
-                                        {children}
-                                    </NavItem>
+                                .map(({ id, href, text }) => (
+                                    <NavItem
+                                        key={id}
+                                        href={href}
+                                        cls="left"
+                                        text={text}
+                                    />
                                 ))}
                         </ul>
                     </nav>
@@ -72,10 +81,13 @@ const Navbar = () => {
                         <ul className="flex flex-col gap-2">
                             {menuOoptions
                                 .slice(2, 4)
-                                .map(({ id, href, children }) => (
-                                    <NavItem key={id} href={href} cls="right">
-                                        {children}
-                                    </NavItem>
+                                .map(({ id, href, text }) => (
+                                    <NavItem
+                                        key={id}
+                                        href={href}
+                                        cls="right"
+                                        text={text}
+                                    />
                                 ))}
                         </ul>
                     </nav>
@@ -83,24 +95,32 @@ const Navbar = () => {
 
                 <MobileMenu menuOpenState={openState} />
             </header>
-        </openContext.Provider>
+        </OpenContext.Provider>
     );
 };
 
 export default Navbar;
 
-const NavItem = ({ href, cls, children }) => {
-    const { setOpenState } = useContext(openContext);
+type navItemProps = {
+    href: string;
+    cls?: "left" | "right";
+    text: string;
+};
+const NavItem = ({ href, cls, text }: navItemProps) => {
+    const { setOpenState } = useContext(OpenContext);
     return (
         <li className={"navItem " + cls} onClick={() => setOpenState(false)}>
-            <a href={href}>
-                <AnimatedText as="" text={children} />
-            </a>
+            {/* <a href={href}> */}
+            <AnimatedText as="a" href={href} text={text} />
+            {/* </a> */}
         </li>
     );
 };
 
-const MobileMenu = ({ menuOpenState }) => {
+type MobileMenuProps = {
+    menuOpenState: boolean;
+};
+const MobileMenu = ({ menuOpenState }: MobileMenuProps) => {
     return (
         <nav
             className={`sm:hidden max-w-xs w-[calc(100%-3rem)] fixed z-50 transition-all duration-300 bg-dark/70 p-3 py-5 rounded-lg border-white/30 border backdrop-blur left-1/2 -translate-x-1/2 ${
@@ -108,10 +128,8 @@ const MobileMenu = ({ menuOpenState }) => {
             }`}
         >
             <ul className=" mx-auto flex flex-col gap-6">
-                {menuOoptions.map(({ id, href, children }) => (
-                    <NavItem key={id} href={href} cls="">
-                        {children}
-                    </NavItem>
+                {menuOoptions.map(({ id, href, text }) => (
+                    <NavItem key={id} href={href} text={text} />
                 ))}
             </ul>
         </nav>

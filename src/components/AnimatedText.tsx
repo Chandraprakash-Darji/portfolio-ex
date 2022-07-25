@@ -1,7 +1,25 @@
 import React, { useEffect, useState } from "react";
 import useInterval from "../hook/useInterval";
 
-const AnimatedText = ({ text, speed, delay, classname, as }) => {
+type AnimatedTextOwnProps<E extends React.ElementType> = {
+    text: string;
+    speed?: number;
+    delay?: number;
+    classname?: string;
+    as?: E;
+};
+
+type Props<E extends React.ElementType> = AnimatedTextOwnProps<E> &
+    Omit<React.ComponentProps<E>, keyof AnimatedTextOwnProps<E>>;
+
+const AnimatedText = <E extends React.ElementType>({
+    text,
+    speed,
+    delay,
+    classname,
+    as,
+    ...props
+}: Props<E>) => {
     const [renderText, setRenderText] = useState("");
     const [randomChar, setRandomChar] = useState("$");
     const [count, setCount] = useState(0);
@@ -10,12 +28,19 @@ const AnimatedText = ({ text, speed, delay, classname, as }) => {
     const CharSpeed = Speed < 50 ? Speed - 20 : 50;
     const Component = as || "span";
 
-    function handleTextTyping(renderText, text, count, setCount) {
+    function handleTextTyping(
+        renderText: string,
+        text: string,
+        count: number,
+        setCount: React.Dispatch<React.SetStateAction<number>>
+    ) {
         setRenderText(() => `${renderText}${text[count]}`);
         setCount((prev) => prev + 1);
     }
 
-    function handleRandomChar(setRandomChar) {
+    function handleRandomChar(
+        setRandomChar: React.Dispatch<React.SetStateAction<string>>
+    ) {
         const charText = "!@#$%^&*()_+=-~`.|\\\"'{}[]:;<>,.?/";
         setRandomChar(
             () => charText[Math.floor(Math.random() * charText.length)]
@@ -48,7 +73,7 @@ const AnimatedText = ({ text, speed, delay, classname, as }) => {
     }, [delay, renderText, text, startChar, startTyping, stopChar, stopTyping]);
 
     return (
-        <Component className={classname}>
+        <Component {...props} className={classname}>
             {renderText}
             {randomChar}
         </Component>

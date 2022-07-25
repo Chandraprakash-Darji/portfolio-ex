@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 
-function useInterval(f, delay = 1000) {
-    const [busy, setBusy] = useState(0);
+function useInterval(
+    f: () => void,
+    delay = 1000
+): [() => void, () => void, boolean] {
+    const [busy, setBusy] = useState(false);
 
     useEffect(() => {
         // start
@@ -13,11 +16,11 @@ function useInterval(f, delay = 1000) {
             setBusy(false);
             clearInterval(t);
         };
-    }, [busy, delay,f]);
+    }, [busy, delay, f]);
 
     return [
-        (_) => setBusy(true), // start
-        (_) => setBusy(false), // stop
+        () => setBusy(true), // start
+        () => setBusy(false), // stop
         busy, // isBusy
     ];
 }
