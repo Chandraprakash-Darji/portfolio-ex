@@ -1,5 +1,4 @@
 import "./NavBar.css";
-import logo from "../../assets/vite.svg";
 import { createContext, useContext, useEffect, useState } from "react";
 
 const menuOoptions = [
