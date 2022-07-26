@@ -15,12 +15,12 @@ const Home = () => {
     return (
         <section
             id="home"
-            className="container mx-auto flex flex-col md:flex-row pt-8 md:pt-20 xl:pt-24 2xl:pt-28 lg:gap-10 select-none relative pb-16 lg:pb-0 sm:text-xl md:justify-between
-            min-h-[calc(100vh_-_var(--x))]"
+            className="container mx-auto flex flex-col md:flex-row pt-8 md:pt-20 xl:pt-24 2xl:pt-28 lg:gap-10 select-none relative pb-20 xl:pb-32 sm:text-xl md:justify-between
+            "
         >
             <div className="flex flex-col gap-3 md:gap-5 lg:gap-10 px-3">
                 <AnimatedText
-                    classname="md:text-xl lg:text-2xl xl:text-3xl text-primary before:content-['<p>_'] before:text-mainDark after:content-['_</p>'] after:text-mainDark "
+                    className="md:text-xl lg:text-2xl xl:text-3xl text-primary before:content-['<p>_'] before:text-mainDark after:content-['_</p>'] after:text-mainDark "
                     text="I am"
                     as={"p"}
                 />
@@ -33,11 +33,16 @@ const Home = () => {
                 </h1>
                 <AnimatedText
                     as="p"
-                    classname="md:text-xl lg:text-2xl xl:text-3xl text-primary before:content-['<p>'] before:text-mainDark after:content-['</p>'] after:text-mainDark "
-                    text={"Frontend Developer // UI Designer"}
-                ></AnimatedText>
+                    className="md:text-xl lg:text-2xl xl:text-3xl text-primary before:content-['<p>'] before:text-mainDark after:content-['</p>'] after:text-mainDark "
+                    text={" Frontend Developer // UI Designer "}
+                />
             </div>
-            <a href="#resume" className="magic-puffIn">
+            <a
+                href="https://resume.io/r/pqgcqYTh8"
+                target={"_blank"}
+                className="magic-puffIn"
+                rel="noreferrer"
+            >
                 <div className="downloadCVWrapper">
                     {/* Background text `</>` */}
                     <div className="absolute top-0 left-0 background opacity-20 -rotate-45 flex justify-center items-center h-full w-full text-[13rem] font-black z-10 ">{`</>`}</div>
@@ -45,9 +50,9 @@ const Home = () => {
 
                     <AnimatedText
                         as="div"
-                        classname="CV h-full w-full flex justify-center items-center z-50 0 cursor-pointer transition-all duration-500 absolute "
+                        className="CV h-full w-full flex justify-center items-center z-50 0 cursor-pointer transition-all duration-500 absolute "
                         text={`<Download CV/>`}
-                    ></AnimatedText>
+                    />
                     {/* Box that pop */}
                     <div className="popBox absolute h-0 w-0 top-1/2 left-1/2 bg-primary -translate-x-1/2 -translate-y-1/2 z-10 transition-all duration-500 rounded-full"></div>
 
