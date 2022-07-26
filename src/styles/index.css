@@ -23,23 +23,20 @@
     outline: #16b17030 solid 1px;
 }
 
-.headingChar {
-    transform-origin: left bottom;
-    transform: rotate(-70deg);
-    /* opacity: 0; */
-    animation: animateChar 1s ease-out forwards;
+.hoverBox:hover {
+    @apply text-dark;
 }
-
-@keyframes animateChar {
+.hoverBox:hover + .popBox {
+    @apply w-full h-full;
+}
+.animteSize {
+    animation: animateWidth 1s infinite alternate-reverse; 
+}
+@keyframes animateWidth {
     0% {
-        transform: rotate(-70deg);
-        opacity: 0;
+        width:12rem;
     }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 1;
-        transform: rotate(0deg);
+    100% {
+        width: 13rem;
     }
 }

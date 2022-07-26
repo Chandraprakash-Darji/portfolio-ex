@@ -2,12 +2,6 @@
     @apply mx-auto h-56 mt-36 md:mt-16 lg:mt-28 xl:mt-16 lg:h-72 aspect-square border-white border-2 rounded-full text-primary relative;
 }
 
-.downloadCVWrapper .CV:hover {
-    @apply text-dark;
-}
-.downloadCVWrapper .CV:hover + .popBox {
-    @apply w-full h-full;
-}
 @keyframes spin {
     to {
         transform: rotate(360deg);
