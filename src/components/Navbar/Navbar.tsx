@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import { createContext, useContext, useEffect, useState } from "react";
 import AnimatedText from "../AnimatedText";
-const menuOoptions = [
+const menuOptions = [
     {
         id: 101,
         text: "//01 <Home/>",
@@ -45,12 +45,12 @@ const Navbar = () => {
         <OpenContext.Provider value={{ openState, setOpenState }}>
             <header className="NavBar md:text-lg select-none">
                 <div
-                    className="bg-dark z-50 min-w-screen container mx-auto flex justify-between items-center py-8"
+                    className="bg-dark z-50 min-w-screen container mx-auto flex justify-between items-center py-8 relative"
                     id="navbar"
                 >
                     <nav className="hidden sm:block">
                         <ul className="flex flex-col gap-2">
-                            {menuOoptions
+                            {menuOptions
                                 .slice(0, 2)
                                 .map(({ id, href, text }) => (
                                     <NavItem
@@ -62,7 +62,7 @@ const Navbar = () => {
                                 ))}
                         </ul>
                     </nav>
-                    <div className="font-Grestal text-[3rem] flex justify-center items-center px-3 md:px-0 md:text-[5rem]">
+                    <div className="font-Grestal text-[3rem] flex justify-center items-center px-3 md:px-0 md:text-[5rem]  md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
                         <a href="#home">CP</a>
                     </div>
                     <button
@@ -79,7 +79,7 @@ const Navbar = () => {
                     </button>
                     <nav className="hidden sm:block z-0">
                         <ul className="flex flex-col gap-2">
-                            {menuOoptions
+                            {menuOptions
                                 .slice(2, 4)
                                 .map(({ id, href, text }) => (
                                     <NavItem
@@ -128,7 +128,7 @@ const MobileMenu = ({ menuOpenState }: MobileMenuProps) => {
             }`}
         >
             <ul className=" mx-auto flex flex-col gap-6">
-                {menuOoptions.map(({ id, href, text }) => (
+                {menuOptions.map(({ id, href, text }) => (
                     <NavItem key={id} href={href} text={text} />
                 ))}
             </ul>

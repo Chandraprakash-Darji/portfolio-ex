@@ -25,7 +25,7 @@
     animation: spin 1.8s linear infinite;
 }
 .downloadCVWrapper .arc-3 {
-    @apply -left-[15%] -top-[15%] w-[130%] h-[130%] border-t-main border-2 before:left-8 before:top-9 after:right-8 after:top-9 lg:before:left-12 lg:before:top-11 lg:after:right-12 lg:after:top-11;
+    @apply -left-[15%] -top-[15%] w-[130%] h-[130%] border-t-main border-l-main border-2 before:left-8 before:bottom-9 after:right-8 after:top-9 lg:before:left-12 lg:before:bottom-11 lg:after:right-12 lg:after:top-11;
     animation: spin 1.6s linear infinite;
 }
 #home .curveLine {
