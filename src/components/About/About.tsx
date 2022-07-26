@@ -1,11 +1,11 @@
-import "./About.css";
 import AppIcons from "../../assets/AppIcons";
+import Heading2 from "../Dumb/Heading2";
 
 const About = () => {
     return (
         <section id="aboutme" className="container mx-auto md:mt-36 xl:mt-72">
             <div className="flex justify-center items-center">
-                <Title text="About_Me" />
+                <Heading2 text="About_Me" />
             </div>
             <div className="flex flex-col lg:flex-row mt-10 gap-x-10 xl:gap-x-16 gap-y-10">
                 <InfoSection />
@@ -17,17 +17,9 @@ const About = () => {
 
 export default About;
 
-function Title({ text }: { text: string }) {
-    return (
-        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl  py-5 relative before:content-['<h2>'] before:text-mainDark after:content-['</h2>'] after:text-mainDark before:text-base lg:before:text-xl after:text-base lg:after:text-xl before:absolute before:right-full before:top-0 after:absolute after:bottom-3 after:left-full after:font-sans after:not-italic after:font-normal before:not-italic before:font-normal before:font-sans font-bold italic font-RobotoCondensed tracking-wide">
-            {text}
-        </h2>
-    );
-}
-
 function InfoSection() {
     return (
-        <div className=" flex-1 text-xl fony-bold flex flex-col gap-6 p-3 pb-10 pl-10">
+        <div className=" flex-1 text-lg md:text-xl fony-bold flex flex-col gap-6 p-3 pb-10 pl-10">
             <h3 className="relative -left-8 text-2xl md:text-4xl font-bold italic font-Roboto tracking-wide before:content-['<h2>'] before:text-mainDark after:content-['</h2>'] after:text-mainDark before:text-base md:before:text-lg  after:text-base md:after:text-lg after:not-italic after:font-normal before:not-italic before:font-normal ">
                 {" "}
                 Hii
@@ -39,7 +31,7 @@ function InfoSection() {
                 the last 9 months, I have been working on my skills while I am
                 in college. In the first semester of my college, there was the
                 subject
-                <span className="text-primary"> *Web Technologies*</span>.
+                <span className="text-primary"> Web Technologies</span>.
             </p>
             <p>
                 I was very amazed when I created my first website, It was a
@@ -56,8 +48,8 @@ function InfoSection() {
                 <span className="text-primary">portfolio </span> better and{" "}
                 <span className="text-primary">freelancing</span>. I would like
                 to work with you{" "}
-                <a href="#contact" className="text-primary">
-                    *Contact*
+                <a href="#contact" className="text-primary hover:underline">
+                    Contact
                 </a>
                 <br />
             </p>
@@ -75,7 +67,7 @@ function LangaugeAndTools() {
             </h3>
 
             <div className="mt-5 p-3 pl-0">
-                <ul className="flex flex-wrap gap-7">
+                <ul className="flex flex-wrap justify-center gap-7">
                     {AppIcons.map(({ key, path, name }) => (
                         <ToolIcon key={key} path={path} name={name} />
                     ))}
