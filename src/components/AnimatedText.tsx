@@ -5,7 +5,6 @@ type AnimatedTextOwnProps<E extends React.ElementType> = {
     text: string;
     speed?: number;
     delay?: number;
-    classname?: string;
     as?: E;
 };
 
@@ -16,12 +15,11 @@ const AnimatedText = <E extends React.ElementType>({
     text,
     speed,
     delay,
-    classname,
     as,
     ...props
 }: Props<E>) => {
     const [renderText, setRenderText] = useState("");
-    const [randomChar, setRandomChar] = useState("$");
+    const [randomChar, setRandomChar] = useState("");
     const [count, setCount] = useState(0);
 
     const Speed = speed || 50;
@@ -73,7 +71,7 @@ const AnimatedText = <E extends React.ElementType>({
     }, [delay, renderText, text, startChar, startTyping, stopChar, stopTyping]);
 
     return (
-        <Component {...props} className={classname}>
+        <Component {...props}>
             {renderText}
             {randomChar}
         </Component>

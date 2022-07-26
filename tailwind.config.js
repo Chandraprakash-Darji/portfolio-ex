@@ -10,8 +10,12 @@ module.exports = {
                 mainDark: "#606061",
             },
             fontFamily: {
-                Hack: ["Hack", ...defaultTheme.fontFamily.sans],
-                Grestal: ["Grestal Script DEMO Regular", "cursive"],
+                Roboto: ["Roboto", ...defaultTheme.fontFamily.sans],
+                RobotoCondensed: [
+                    "Roboto Condensed",
+                    ...defaultTheme.fontFamily.sans,
+                ],
+                mono: ["Roboto Mono", ...defaultTheme.fontFamily.mono],
             },
         },
     },

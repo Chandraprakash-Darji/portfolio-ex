@@ -1,6 +1,7 @@
 import "./NavBar.css";
 import { createContext, useContext, useEffect, useState } from "react";
 import AnimatedText from "../AnimatedText";
+
 const menuOptions = [
     {
         id: 101,
@@ -45,7 +46,7 @@ const Navbar = () => {
         <OpenContext.Provider value={{ openState, setOpenState }}>
             <header className="NavBar md:text-lg select-none">
                 <div
-                    className="bg-dark z-50 min-w-screen container mx-auto flex justify-between items-center py-8 relative"
+                    className="bg-dark z-50 min-w-screen container mx-auto flex justify-between items-center py-8 relative px-3"
                     id="navbar"
                 >
                     <nav className="hidden sm:block">
@@ -62,7 +63,7 @@ const Navbar = () => {
                                 ))}
                         </ul>
                     </nav>
-                    <div className="font-Grestal text-[3rem] flex justify-center items-center px-3 md:px-0 md:text-[5rem]  md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+                    <div className="font-RobotoCondensed font-bold  text-[3rem] flex justify-center items-center px-3 md:px-0 md:text-[5rem]  md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
                         <a href="#home">CP</a>
                     </div>
                     <button
