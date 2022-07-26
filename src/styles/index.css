@@ -43,3 +43,24 @@
 * {
     outline: #16b17030 solid 1px;
 }
+
+.headingChar {
+    transform-origin: left bottom;
+    transform: rotate(-70deg);
+    /* opacity: 0; */
+    animation: animateChar 1s ease-out forwards;
+}
+
+@keyframes animateChar {
+    0% {
+        transform: rotate(-70deg);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
