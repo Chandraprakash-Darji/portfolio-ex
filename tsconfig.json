@@ -1,9 +1,27 @@
 {
-    "include": ["./src/**/*"],
     "compilerOptions": {
-        "strict": true,
+        "outDir": "build/dist",
+        "target": "es5",
+        "lib": ["es6", "dom"],
+        "sourceMap": true,
+        "allowJs": false,
+        "jsx": "react-jsx",
+        "moduleResolution": "node",
+        "rootDir": "src",
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
         "esModuleInterop": true,
-        "lib": ["dom", "es2015"],
-        "jsx": "react-jsx"
-    }
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "acceptance-tests",
+        "webpack",
+        "jest",
+        "src/setupTests.ts"
+    ]
 }
