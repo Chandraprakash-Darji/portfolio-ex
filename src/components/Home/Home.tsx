@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./Home.css";
 import AnimatedText from "../AnimatedText";
 
@@ -24,7 +24,7 @@ const Home = () => {
                     text="I am"
                     as={"p"}
                 />
-                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-[6rem] py-10 pl-10 lg:pl-20 relative before:content-['<h1>'] before:text-mainDark after:content-['</h1>'] after:text-mainDark before:text-base lg:before:text-3xl after:text-base lg:after:text-3xl before:absolute before:left-5 lg:before:left-10 before:top-3 lg:before:top-0 after:absolute after:bottom-3 lg:after:bottom-0  after:left-5 lg:after:left-10 leading-[1.1] after:font-sans after:not-italic after:font-normal before:not-italic before:font-normal before:font-sans magic-vanishIn font-bold italic font-Hack">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl xl:text-[6rem] py-10 pl-10 lg:pl-20 relative before:content-['<h1>'] before:text-mainDark after:content-['</h1>'] after:text-mainDark before:text-base lg:before:text-3xl after:text-base lg:after:text-3xl before:absolute before:left-5 lg:before:left-10 before:top-3 lg:before:top-0 after:absolute after:bottom-3 lg:after:bottom-0  after:left-5 lg:after:left-10 leading-[1.1] after:font-sans after:not-italic after:font-normal before:not-italic before:font-normal before:font-sans font-bold italic font-RobotoCondensed tracking-wide">
                     Chandra
                     <span className="hidden md:inline">
                         <br />
