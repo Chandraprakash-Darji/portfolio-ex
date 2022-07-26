@@ -63,7 +63,7 @@ const Navbar = () => {
                                 ))}
                         </ul>
                     </nav>
-                    <div className="font-Grestal text-[3rem] flex justify-center items-center px-3 md:px-0 md:text-[5rem]  md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+                    <div className="font-RobotoCondensed font-bold  text-[3rem] flex justify-center items-center px-3 md:px-0 md:text-[5rem]  md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
                         <a href="#home">CP</a>
                     </div>
                     <button
