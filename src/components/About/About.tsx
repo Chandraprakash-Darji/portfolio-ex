@@ -27,16 +27,16 @@ function InfoSection() {
                 I'am <span className="text-primary">Chandraparakash </span>,
             </h3>
             <p className="relative before:content-['<p>'] before:text-mainDark before:text-lg before:not-italic before:font-normal before:font-sans before:absolute before:-left-8">
-                <br />I am here to showcase my skills and present myself. For
-                the last 9 months, I have been working on my skills while I am
-                in college. In the first semester of my college, there was the
-                subject
-                <span className="text-primary"> Web Technologies</span>.
+                <br /> I am a self-learner and a person who loves to learn new
+                things. I have been working on my skills for 1 year now. I
+                started with the subject
+                <span className="text-primary"> Web Technologies</span>, which
+                was one of the most interesting subject for me.
             </p>
             <p>
-                I was very amazed when I created my first website, It was a
-                Burger King clone. After that, I started working on my skills in
-                HTML5, CSS, JavaScript, etc. and kept going.
+                While learning the subject I was creating websites, Burger King
+                clone is one of it After that, I moved on to master the HTML5,
+                CSS, JavaScript, NodeJS, and React.
             </p>
             <p>
                 Now I have the following skills and desire to learn more. I am
