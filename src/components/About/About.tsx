@@ -1,4 +1,4 @@
-import AppIcons from "../../assets/AppIcons";
+import AppIcons from "../../assets/Icons";
 import Heading2 from "../Dumb/Heading2";
 
 const About = () => {
@@ -27,7 +27,7 @@ function InfoSection() {
                 I'am <span className="text-primary">Chandraparakash </span>,
             </h3>
             <p className="relative before:content-['<p>'] before:text-mainDark before:text-lg before:not-italic before:font-normal before:font-sans before:absolute before:-left-8">
-                <br /> I am a self-learner and a person who loves to learn new
+                <br /> I am a self-taught Developer and a person who loves to learn new
                 things. I have been working on my skills for 1 year now. I
                 started with the subject
                 <span className="text-primary"> Web Technologies</span>, which
