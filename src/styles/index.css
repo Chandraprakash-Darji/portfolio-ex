@@ -30,7 +30,7 @@
     @apply w-full h-full;
 }
 .animteSize {
-    animation: animateWidth 1s infinite alternate-reverse; 
+    animation: animateWidth linear 1s infinite alternate-reverse; 
 }
 @keyframes animateWidth {
     0% {

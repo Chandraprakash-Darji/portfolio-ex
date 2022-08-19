@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "./Home.css";
 import AnimatedText from "../AnimatedText";
+import "./Home.css";
 
 const Home = () => {
     useEffect(() => {
@@ -38,7 +38,7 @@ const Home = () => {
                 />
             </div>
             <a
-                href="https://resume.io/r/pqgcqYTh8"
+                href="/portfolio.pdf"
                 target={"_blank"}
                 className="magic-puffIn"
                 rel="noreferrer"

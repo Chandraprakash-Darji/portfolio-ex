@@ -9,6 +9,8 @@ declare module "*.svg" {
     export default custom;
 }
 
+declare module "*.pdf";
+
 declare module "*.png" {
     const custom: string;
     export default custom;
