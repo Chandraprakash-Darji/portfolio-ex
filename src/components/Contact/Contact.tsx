@@ -1,5 +1,6 @@
 import useElementOnSecreen from "../../hook/useElementOnSecreen";
 import Heading2 from "../Dummy/Heading2";
+import PrimaryText from "../Dummy/PrimaryText";
 
 const Contact = () => {
     const [isVisible, containerRef] = useElementOnSecreen();
@@ -46,21 +47,24 @@ const Contact = () => {
                 <p className="text-center py-10">
                     || Design by{" "}
                     <a
-                        className="text-primary hover:underline"
                         href="https://dribbble.com/saaddesigns"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Saad
+                        <PrimaryText className="hover:underline">
+                            Saad
+                        </PrimaryText>
                     </a>{" "}
                     && coded by{" "}
                     <a
-                        className="text-primary hover:underline"
                         href="http://github.com/Chandraprakash-Darji"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Chandraprakash Darji
+                        {" "}
+                        <PrimaryText className="hover:underline">
+                            Chandraprakash Darji
+                        </PrimaryText>
                     </a>{" "}
                     ||
                 </p>

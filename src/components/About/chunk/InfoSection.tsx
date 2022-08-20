@@ -9,7 +9,7 @@ const InfoSection = () => {
                 Hii
                 <span className="not-italic"> 👋 </span>
                 I'am <PrimaryText> Chandra</PrimaryText>,{" "}
-            </Heading3> 
+            </Heading3>
             <p className="relative before:content-['<p>'] before:text-mainDark before:text-lg before:not-italic before:font-normal before:font-sans before:absolute before:-left-8">
                 <br /> I am a self-taught Developer and a person who loves to
                 learn new things. I have been working on my skills for 1 year
@@ -32,8 +32,10 @@ const InfoSection = () => {
                 <PrimaryText>portfolio </PrimaryText> better and{" "}
                 <PrimaryText>freelancing</PrimaryText>. I would like to work
                 with you{" "}
-                <a href="#contact" className="hover:underline">
-                    <PrimaryText>Contact</PrimaryText>
+                <a href="#contact">
+                    <PrimaryText className="hover:underline">
+                        Contact
+                    </PrimaryText>
                 </a>
                 <br />
             </p>
