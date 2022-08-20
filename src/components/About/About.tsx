@@ -1,9 +1,18 @@
 import AppIcons from "../../assets/Icons";
+import useElementOnSecreen from "../../hook/useElementOnSecreen";
 import Heading2 from "../Dumb/Heading2";
 
 const About = () => {
+    const [isVisible, containerRef] = useElementOnSecreen();
+
     return (
-        <section id="aboutme" className="container mx-auto md:mt-36 xl:mt-72">
+        <section
+            ref={containerRef}
+            id="aboutme"
+            className={`container mx-auto md:mt-36 xl:mt-72 transition-all duration-500 ease-linear ${
+                isVisible ? "translate-x-0" : "opacity-0 translate-y-36"
+            }`}
+        >
             <div className="flex justify-center items-center">
                 <Heading2 text="About_Me" />
             </div>
@@ -27,9 +36,9 @@ function InfoSection() {
                 I'am <span className="text-primary">Chandraparakash </span>,
             </h3>
             <p className="relative before:content-['<p>'] before:text-mainDark before:text-lg before:not-italic before:font-normal before:font-sans before:absolute before:-left-8">
-                <br /> I am a self-taught Developer and a person who loves to learn new
-                things. I have been working on my skills for 1 year now. I
-                started with the subject
+                <br /> I am a self-taught Developer and a person who loves to
+                learn new things. I have been working on my skills for 1 year
+                now. I started with the subject
                 <span className="text-primary"> Web Technologies</span>, which
                 was one of the most interesting subject for me.
             </p>
