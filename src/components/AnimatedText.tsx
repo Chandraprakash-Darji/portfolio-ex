@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import useInterval from "../hook/useInterval";
 
 type AnimatedTextOwnProps<E extends React.ElementType> = {
@@ -9,6 +9,7 @@ type AnimatedTextOwnProps<E extends React.ElementType> = {
 };
 
 type Props<E extends React.ElementType> = AnimatedTextOwnProps<E> &
+    // removing the AnimatedTextOwnProps from default component props
     Omit<React.ComponentProps<E>, keyof AnimatedTextOwnProps<E>>;
 
 const AnimatedText = <E extends React.ElementType>({
@@ -19,41 +20,38 @@ const AnimatedText = <E extends React.ElementType>({
     ...props
 }: Props<E>) => {
     const [renderText, setRenderText] = useState("");
+    // Randomly select a character from the text
     const [randomChar, setRandomChar] = useState("");
+    // Number of characters in the text
     const [count, setCount] = useState(0);
 
-    const Speed = speed || 50;
-    const CharSpeed = Speed < 50 ? Speed - 20 : 50;
+    // Defaults
+    const Speed = speed || 80;
     const Component = as || "span";
 
-    function handleTextTyping(
-        renderText: string,
-        text: string,
-        count: number,
-        setCount: React.Dispatch<React.SetStateAction<number>>
-    ) {
-        setRenderText(() => `${renderText}${text[count]}`);
-        setCount((prev) => prev + 1);
-    }
+    // incresing count
+    const handleTextTyping = useCallback(() => {
+        setCount((p) => p + 1);
+    }, []);
 
-    function handleRandomChar(
-        setRandomChar: React.Dispatch<React.SetStateAction<string>>
-    ) {
+    // Getting Random Char
+    const handleRandomChar = useCallback(() => {
         const charText = "!@#$%^&*()_+=-~`.|\\\"'{}[]:;<>,.?/";
         setRandomChar(
             () => charText[Math.floor(Math.random() * charText.length)]
         );
-    }
+    }, []);
 
     const [startTyping, stopTyping] = useInterval(
-        () => handleTextTyping(renderText, text, count, setCount),
+        () => handleTextTyping(),
         Speed
     );
 
-    const [startChar, stopChar] = useInterval(
-        () => handleRandomChar(setRandomChar),
-        CharSpeed
-    );
+    const [startChar, stopChar] = useInterval(() => handleRandomChar(), Speed);
+
+    useEffect(() => {
+        setRenderText(text.substring(0, count));
+    }, [count]);
 
     useEffect(() => {
         if (renderText.length >= text.length) {
@@ -66,8 +64,6 @@ const AnimatedText = <E extends React.ElementType>({
             startTyping();
             startChar();
         }, delay);
-
-        return () => {};
     }, [delay, renderText, text, startChar, startTyping, stopChar, stopTyping]);
 
     return (
