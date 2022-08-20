@@ -34,9 +34,9 @@
 }
 @keyframes animateWidth {
     0% {
-        width:12rem;
+        width:100%;
     }
     100% {
-        width: 13rem;
+        width: 90%;
     }
 }

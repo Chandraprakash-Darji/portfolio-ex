@@ -16,13 +16,18 @@ const Contact = () => {
                 <div className="flex justify-center">
                     <Heading2>ConnectWithMe</Heading2>
                 </div>
-                <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 py-16 md:py-32">
+                <div className="flex flex-wrap md:flex-nowrap justify-center items-center md:gap-20 py-16 md:py-32">
                     <SocialButton
                         text="LinkedIn"
                         href="https://www.linkedin.com/in/chandra-prakash-6065b2224/"
                         pos={{
                             x: isVisible ? 0 : -153,
                             y: isVisible ? 0 : -160,
+                        }}
+                        className={{
+                            x: "md:-translate-x-16",
+                            y: "md:-translate-y-36",
+                            size: "w-32 md:w-60",
                         }}
                     />
                     <SocialButton
@@ -32,16 +37,31 @@ const Contact = () => {
                             x: isVisible ? 0 : -160,
                             y: isVisible ? 0 : 153,
                         }}
+                        className={{
+                            x: "md:-translate-x-12",
+                            y: "md:translate-y-16",
+                            size: "w-32 md:w-44",
+                        }}
                     />
                     <SocialButton
                         text="Gmail"
                         href="mailto:prakashchandra3786@gmail.com"
                         pos={{ x: isVisible ? 0 : -83, y: isVisible ? 0 : -90 }}
+                        className={{
+                            x: "md:-translate-x-10",
+                            y: "md:-translate-y-36",
+                            size: "w-32 md:w-56",
+                        }}
                     />
                     <SocialButton
                         text="Twitter"
                         href="https://twitter.com/chandra_7852"
                         pos={{ x: isVisible ? 0 : 6, y: isVisible ? 0 : 75 }}
+                        className={{
+                            x: "md:-translate-x-20",
+                            y: "md:translate-y-20",
+                            size: "w-32 md:w-40",
+                        }}
                     />
                 </div>
                 <p className="text-center py-10">
@@ -79,21 +99,29 @@ type SocialButtonProps = {
     text: string;
     href: string;
     pos: { x: number; y: number };
+    className: { x: string; y: string; size: string };
 };
 
-const SocialButton = ({ text, href, pos: { x, y } }: SocialButtonProps) => {
+const SocialButton = ({
+    text,
+    href,
+    pos: { x, y },
+    className,
+}: SocialButtonProps) => {
     return (
         <a
             href={href}
             target="_blank"
             rel="noreferrer"
-            style={{
-                transform: `translate(${x}px , ${y}px)`,
-            }}
-            className="transition-all duration-500"
+            // style={{
+            //     transform: `translate(${x}px , ${y}px)`,
+            // }}
+            className={`transition-all duration-500 ${className.x} ${className.y}`}
         >
-            <div className="w-32 md:w-52 aspect-square flex justify-center items-center">
-                <div className="animteSize w-32 md:w-52 aspect-square border-primary border-2 rounded-full text-main relative  md:text-2xl">
+            <div
+                className={`${className.size} aspect-square flex justify-center items-center`}
+            >
+                <div className="animteSize w-full md:w-full aspect-square border-primary border-2 rounded-full text-main relative  md:text-2xl">
                     <div className="hoverBox h-full w-full flex justify-center items-center z-50 0 cursor-pointer transition-all duration-500 absolute text-center">
                         {"<>"}
                         <br /> {text}
