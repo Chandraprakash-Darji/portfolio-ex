@@ -15,7 +15,7 @@ const ToolIcon = ({ name, path }: ToolIconProps) => {
                 alt={name}
                 draggable="false"
             />
-            <div className="absolute top-3/4 whitespace-nowrap bg-primary text-dark p-0 group-hover:px-2 group-hover:py-1 z-20 rounded-lg transition-all duration-300 scale-0 group-hover:scale-100 overflow-hidden group-hover:opacity-100">
+            <div className="absolute top-3/4 whitespace-nowrap bg-primary text-dark p-0 group-hover:px-2 group-hover:py-1 z-20 rounded-lg transition-all duration-300 scale-0 group-hover:scale-100 overflow-hidden group-hover:opacity-100 font-bold">
                 {name}
             </div>
         </li>
