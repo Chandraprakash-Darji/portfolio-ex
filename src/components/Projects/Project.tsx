@@ -11,7 +11,7 @@ const Project = () => {
                 isVisible ? "translate-x-0" : "opacity-0 translate-y-36"
             }`}
         >
-            Projects Comming Soon...
+            ProjectsCommingSoon...
         </section>
     );
 };

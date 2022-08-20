@@ -14,7 +14,7 @@ const About = () => {
             }`}
         >
             <div className="flex justify-center items-center">
-                <Heading2 text="About_Me" />
+                <Heading2 text="AboutMe" />
             </div>
             <div className="flex flex-col lg:flex-row mt-10 gap-x-10 xl:gap-x-16 gap-y-10">
                 <InfoSection />
@@ -94,11 +94,11 @@ type ToolIconProps = {
 function ToolIcon({ name, path }: ToolIconProps) {
     return (
         <li
-            className="bg-primary/20 p-4 hover:bg-main/5 flex justify-center items-center rounded-xl border border-primary/70 hover:border-primary/50 shadow-md shadow-main/20 hover:shadow-none"
+            className="bg-primary/20 p-4 hover:bg-main/5 flex justify-center items-center rounded-xl border border-primary/70 hover:border-primary/50 shadow-md shadow-main/20 hover:shadow-none hover:rounded-[4rem] transition-all duration-300 group"
             title={name}
         >
             <img
-                className="w-14 md:w-20 aspect-auto "
+                className="w-14 md:w-20 aspect-auto transition-all duration-300 group-hover:rounded-[4rem]"
                 src={path}
                 alt={name}
                 draggable="false"

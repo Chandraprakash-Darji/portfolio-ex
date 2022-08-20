@@ -14,7 +14,7 @@ const Contact = () => {
         >
             <div className="container mx-auto">
                 <div className="flex justify-center">
-                    <Heading2 text="Connect with me" />
+                    <Heading2 text="ConnectWithMe" />
                 </div>
                 <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 py-16 md:py-32">
                     <SocialButton
