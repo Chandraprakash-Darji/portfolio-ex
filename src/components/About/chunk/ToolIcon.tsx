@@ -10,12 +10,12 @@ const ToolIcon = ({ name, path }: ToolIconProps) => {
             title={name}
         >
             <img
-                className="w-14 md:w-20 group-hover:p-5 aspect-auto transition-all duration-300 "
+                className="w-14 md:w-20 group-hover:p-2 sm:group-hover:p-5 aspect-auto transition-all duration-300 "
                 src={path}
                 alt={name}
                 draggable="false"
             />
-            <div className="absolute top-3/4 whitespace-nowrap bg-primary text-dark p-0 group-hover:px-2 group-hover:py-1 z-20 rounded-lg transition-all duration-300 scale-0 group-hover:scale-100 overflow-hidden      group-hover:opacity-100">
+            <div className="absolute top-3/4 whitespace-nowrap bg-primary text-dark p-0 group-hover:px-2 group-hover:py-1 z-20 rounded-lg transition-all duration-300 scale-0 group-hover:scale-100 overflow-hidden group-hover:opacity-100">
                 {name}
             </div>
         </li>
