@@ -1,3 +1,4 @@
+
 declare module "*.svg" {
     import * as React from "react";
 
@@ -8,8 +9,6 @@ declare module "*.svg" {
     const custom: string;
     export default custom;
 }
-
-declare module "*.pdf";
 
 declare module "*.png" {
     const custom: string;
