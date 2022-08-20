@@ -4,6 +4,7 @@ function useInterval(
     f: () => void,
     delay = 1000
 ): [() => void, () => void, boolean] {
+    
     const [busy, setBusy] = useState(false);
 
     useEffect(() => {

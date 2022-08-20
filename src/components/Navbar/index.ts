@@ -3,9 +3,10 @@ export { default as MobileMenu } from "./chunk/MobileMenu";
 export { default as NavItem } from "./chunk/NavItem";
 export { default as OpenMenuBtn } from "./chunk/OpenMenuBtn";
 export { default as SmNav } from "./chunk/SmNav";
-
 export { OpenContext } from "./Navbar";
+
 export default Navbar;
+
 export const menuOptions = [
     {
         id: 101,
