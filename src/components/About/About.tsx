@@ -1,5 +1,6 @@
 import { InfoSection, LangaugeAndTools } from ".";
 import useElementOnSecreen from "../../hook/useElementOnSecreen";
+import AnimatedText from "../AnimatedText";
 import Heading2 from "../Dummy/Heading2";
 
 const About = () => {
@@ -14,7 +15,10 @@ const About = () => {
             }`}
         >
             <div className="flex justify-center items-center">
-                <Heading2>AboutMe</Heading2>
+                <Heading2>
+                    {isVisible ? <AnimatedText text="AboutMe" /> : ""}
+                    {/* AboutMe */}
+                </Heading2>
             </div>
             <div className="flex flex-col lg:flex-row mt-10 gap-x-10 xl:gap-x-16 gap-y-10">
                 <InfoSection />
