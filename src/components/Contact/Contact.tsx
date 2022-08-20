@@ -1,6 +1,5 @@
-import { useEffect } from "react";
 import useElementOnSecreen from "../../hook/useElementOnSecreen";
-import Heading2 from "../Dumb/Heading2";
+import Heading2 from "../Dummy/Heading2";
 
 const Contact = () => {
     const [isVisible, containerRef] = useElementOnSecreen();
@@ -14,7 +13,7 @@ const Contact = () => {
         >
             <div className="container mx-auto">
                 <div className="flex justify-center">
-                    <Heading2 text="ConnectWithMe" />
+                    <Heading2>ConnectWithMe</Heading2>
                 </div>
                 <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 py-16 md:py-32">
                     <SocialButton
@@ -79,11 +78,6 @@ type SocialButtonProps = {
 };
 
 const SocialButton = ({ text, href, pos: { x, y } }: SocialButtonProps) => {
-    useEffect(() => {
-        console.log(window.innerWidth);
-        return () => {};
-    }, []);
-
     return (
         <a
             href={href}
