@@ -23,7 +23,7 @@
     animation: spin 1.6s linear infinite;
 }
 #home .curveLine {
-    @apply hidden md:block h-[30rem] lg:h-[34rem] xl:h-[44rem] 2xl:h-[50rem] aspect-square  absolute top-[13rem] lg:top-[16rem] -left-[6rem] lg:-left-[2rem] xl:top-[18rem] xl:-left-[1rem] 2xl:top-[19rem];
+    @apply hidden md:block w-[30rem] lg:w-[34rem] xl:w-[44rem] 2xl:w-[50rem]  absolute top-[13rem] lg:top-[16rem] -left-[6rem] lg:-left-[2rem] xl:top-[18rem] xl:-left-[1rem] 2xl:top-[19rem];
 }
 
 #home .curveLine path {
