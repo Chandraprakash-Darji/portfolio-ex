@@ -14,3 +14,9 @@ declare module "*.png" {
     const custom: string;
     export default custom;
 }
+
+// For SVG Props
+export interface SvgProps {
+    size?: number;
+    children: React.ReactNode;
+}
