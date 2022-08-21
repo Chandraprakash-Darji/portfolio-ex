@@ -20,8 +20,8 @@ export const menuOptions = [
     },
     {
         id: 103,
-        text: "//03 <MyProjects/>",
-        href: "#myprojects",
+        text: "//03 <MyPortfolio/>",
+        href: "#myportfolio",
     },
 
     {
