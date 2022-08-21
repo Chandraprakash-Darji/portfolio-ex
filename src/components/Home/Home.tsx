@@ -74,24 +74,17 @@ export default Home;
 function CurveSvg() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 878.826 678">
-            <g
-                id="Group_3"
-                data-name="Group 3"
-                transform="translate(-97.174 -139)"
-            >
+            <g transform="translate(-97.174 -139)">
                 <path
-                    id="Path_1"
-                    data-name="Path 1"
+                    id="curveSvgPath"
                     d="M5475.719,162.724h-86.277s-1.547,135.657,0,198.591,52.367,167.9,178.905,168.835,396.488-1.733,497.264,0,173.82,84.186,175.553,163.173,0,100.033,0,100.033"
                     transform="translate(-5289)"
                     fill="none"
                     stroke="#00ff94"
                     strokeWidth="5"
                 />
-                <g id="Group_1" data-name="Group 1" transform="translate(0 66)">
+                <g id="curveSvgPath-Cirlce--1" transform="translate(0 66)">
                     <circle
-                        id="Ellipse_2"
-                        data-name="Ellipse 2"
                         cx="23.5"
                         cy="23.5"
                         r="23.5"
@@ -99,8 +92,6 @@ function CurveSvg() {
                         fill="rgba(0,255,148,0.57)"
                     />
                     <circle
-                        id="Ellipse_1"
-                        data-name="Ellipse 1"
                         cx="11"
                         cy="11"
                         r="11"
@@ -108,14 +99,8 @@ function CurveSvg() {
                         fill="#fff"
                     />
                 </g>
-                <g
-                    id="Group_2"
-                    data-name="Group 2"
-                    transform="translate(767 697)"
-                >
+                <g id="curveSvgPath-Cirlce--2" transform="translate(767 697)">
                     <circle
-                        id="Ellipse_2-2"
-                        data-name="Ellipse 2"
                         cx="23.5"
                         cy="23.5"
                         r="23.5"
@@ -123,8 +108,6 @@ function CurveSvg() {
                         fill="rgba(0,255,148,0.57)"
                     />
                     <circle
-                        id="Ellipse_1-2"
-                        data-name="Ellipse 1"
                         cx="11"
                         cy="11"
                         r="11"
@@ -133,7 +116,6 @@ function CurveSvg() {
                     />
                 </g>
                 <text
-                    id="_"
                     data-name="&lt;/&gt;"
                     transform="translate(410 552)"
                     fill="#fff"

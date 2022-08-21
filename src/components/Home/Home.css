@@ -34,9 +34,9 @@
     stroke-dashoffset: -1400;
 }
 #home .curveLine path {
-    animation: animatePath 1.5s linear forwards;
+    animation: animateCurveLine 1.5s linear forwards;
 }
-@keyframes animatePath {
+@keyframes animateCurveLine {
     0% {
         stroke-dashoffset: 1400;
     }
@@ -63,16 +63,7 @@
         transform: translate(410px, 552px);
     }
 }
-#home .curveLine #Group_2 {
+#home .curveLine #curveSvgPath-Cirlce--2 {
     opacity: 0;
     animation: animateOpacity 0.3s ease-out forwards 1.5s;
-}
-
-@keyframes animateOpacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
 }
