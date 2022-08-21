@@ -1,4 +1,5 @@
 import useElementOnSecreen from "../../hook/useElementOnSecreen";
+import AnimatedText from "../AnimatedText";
 import Heading2 from "../Dummy/Heading2";
 import PrimaryText from "../Dummy/PrimaryText";
 
@@ -14,7 +15,9 @@ const Contact = () => {
         >
             <div className="container mx-auto">
                 <div className="flex justify-center">
-                    <Heading2>ConnectWithMe</Heading2>
+                    <Heading2>
+                        <AnimatedText text="ConnectWithMe" />
+                    </Heading2>
                 </div>
                 <div className="flex flex-wrap md:flex-nowrap justify-center items-center md:gap-20 py-16 md:py-32">
                     <SocialButton
@@ -44,7 +47,7 @@ const Contact = () => {
                         }}
                     />
                     <SocialButton
-                        text="Gmail"
+                        text="Mail"
                         href="mailto:prakashchandra3786@gmail.com"
                         pos={{ x: isVisible ? 0 : -83, y: isVisible ? 0 : -90 }}
                         className={{
