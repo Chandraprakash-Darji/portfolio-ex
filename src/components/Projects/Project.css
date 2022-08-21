@@ -1,0 +1,60 @@
+#myportfolio .projectImg:hover .project-img-ring {
+    animation: animateRing 2s infinite;
+}
+#myportfolio .projectImg:hover .project-img-ring--1 {
+    animation-delay: 500ms;
+}
+#myportfolio .projectImg:hover .project-img-ring--2 {
+    animation-delay: 1000ms;
+}
+#myportfolio .projectImg:hover .project-img-ring--3 {
+    animation-delay: 1500ms;
+}
+@keyframes animateRing {
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 140%;
+        opacity: 0;
+        border-width: 0;
+    }
+}
+
+#myportfolio .projectCurve path {
+    fill: transparent;
+    stroke-width: 5;
+    stroke: #00ff94;
+    stroke-dasharray: 1700;
+    stroke-dashoffset: 1700;
+}
+
+#myportfolio .projectCurve.animate path {
+    animation: projectCurve 2s linear forwards;
+}
+
+@keyframes projectCurve {
+    0% {
+        stroke-dashoffset: 1700;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+#myportfolio .projectCurve text,
+#myportfolio .projectCurve #ProjectCurve-Cirlce--2 {
+    opacity: 0;
+}
+#myportfolio .projectCurve.animate text,
+#myportfolio .projectCurve.animate #ProjectCurve-Cirlce--2 {
+    animation: animateOpacity 0.3s ease-out forwards;
+}
+
+#myportfolio .projectCurve.animate text {
+    animation-delay: 1.4s;
+}
+#myportfolio .projectCurve.animate #ProjectCurve-Cirlce--2 {
+    animation-delay: 2s;
+}
