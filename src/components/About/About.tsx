@@ -10,7 +10,7 @@ const About = () => {
         <section
             id="aboutme"
             ref={containerRef}
-            className={`container mx-auto md:mt-36 xl:mt-72 transition-all duration-500 ease-linear relative ${
+            className={`container mx-auto mt-10 md:mt-36 xl:mt-72 transition-all duration-500 ease-linear relative ${
                 isVisible ? "translate-x-0" : "opacity-0 translate-y-36"
             }`}
         >

@@ -9,7 +9,7 @@ const Contact = () => {
         <div
             ref={containerRef}
             id="contact"
-            className={`min-h-[30rem] transition-all duration-500 ease-linear container mt-[21rem] mx-auto ${
+            className={`min-h-[30rem] transition-all duration-500 ease-linear container  mt-10 lg:mt-[21rem] mx-auto ${
                 isVisible ? "pt-0" : "opacity-0 pt-36"
             }`}
         >
