@@ -1,7 +1,7 @@
+import { Footer, SocialWrapper } from ".";
 import useElementOnSecreen from "../../hook/useElementOnSecreen";
 import AnimatedText from "../AnimatedText";
 import Heading2 from "../Dummy/Heading2";
-import PrimaryText from "../Dummy/PrimaryText";
 
 const Contact = () => {
     const [isVisible, containerRef] = useElementOnSecreen();
@@ -9,128 +9,19 @@ const Contact = () => {
         <div
             ref={containerRef}
             id="contact"
-            className={`min-h-[30rem] transition-all duration-500 ease-linear ${
+            className={`min-h-[30rem] transition-all duration-500 ease-linear container mt-[21rem] mx-auto ${
                 isVisible ? "pt-0" : "opacity-0 pt-36"
             }`}
         >
-            <div className="container mx-auto">
-                <div className="flex justify-center items-center">
-                    <Heading2>
-                        {isVisible ? <AnimatedText text="Connect with Me" /> : ""}
-                    </Heading2>
-                </div>
-                <div className="flex flex-wrap md:flex-nowrap gap-5 justify-center items-center md:gap-10 py-16 md:pb-20 md:pt-40">
-                    <SocialButton
-                        text="LinkedIn"
-                        href="https://www.linkedin.com/in/chandra-prakash-6065b2224/"
-                        pos={{
-                            x: isVisible ? 0 : -153,
-                            y: isVisible ? 0 : -160,
-                        }}
-                        className={{
-                            x: "md:-translate-x-16",
-                            y: "md:-translate-y-36",
-                            size: "w-32 md:w-60",
-                        }}
-                    />
-                    <SocialButton
-                        text="Github"
-                        href="http://github.com/Chandraprakash-Darji"
-                        pos={{
-                            x: isVisible ? 0 : -160,
-                            y: isVisible ? 0 : 153,
-                        }}
-                        className={{
-                            x: "md:-translate-x-12",
-                            y: "md:translate-y-16",
-                            size: "w-32 md:w-44",
-                        }}
-                    />
-                    <SocialButton
-                        text="Mail"
-                        href="mailto:prakashchandra3786@gmail.com"
-                        pos={{ x: isVisible ? 0 : -83, y: isVisible ? 0 : -90 }}
-                        className={{
-                            x: "md:-translate-x-10",
-                            y: "md:-translate-y-36",
-                            size: "w-32 md:w-56",
-                        }}
-                    />
-                    <SocialButton
-                        text="Twitter"
-                        href="https://twitter.com/chandra_7852"
-                        pos={{ x: isVisible ? 0 : 6, y: isVisible ? 0 : 75 }}
-                        className={{
-                            x: "md:-translate-x-20",
-                            y: "md:translate-y-20",
-                            size: "w-32 md:w-40",
-                        }}
-                    />
-                </div>
-                <p className="text-center py-10">
-                    || Design by{" "}
-                    <a
-                        href="https://dribbble.com/saaddesigns"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <PrimaryText className="hover:underline">
-                            Saad
-                        </PrimaryText>
-                    </a>{" "}
-                    && coded by{" "}
-                    <a
-                        href="http://github.com/Chandraprakash-Darji"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        {" "}
-                        <PrimaryText className="hover:underline">
-                            Chandra
-                        </PrimaryText>
-                    </a>{" "}
-                    ||
-                </p>
+            <div className="flex justify-center items-center">
+                <Heading2>
+                    {isVisible ? <AnimatedText text="Connect with Me" /> : ""}
+                </Heading2>
             </div>
+            <SocialWrapper />
+            <Footer />
         </div>
     );
 };
 
 export default Contact;
-
-type SocialButtonProps = {
-    text: string;
-    href: string;
-    pos: { x: number; y: number };
-    className: { x: string; y: string; size: string };
-};
-
-const SocialButton = ({
-    text,
-    href,
-    pos: { x, y },
-    className,
-}: SocialButtonProps) => {
-    return (
-        <a
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            className={`transition-all duration-500 ${className.x} ${className.y}`}
-        >
-            <div
-                className={`${className.size} aspect-square flex justify-center items-center`}
-            >
-                <div className="animteSize w-full md:w-full aspect-square border-primary border-2 rounded-full text-main relative  md:text-2xl">
-                    <div className="hoverBox h-full w-full flex justify-center items-center z-50 0 cursor-pointer transition-all duration-500 absolute text-center">
-                        {"<>"}
-                        <br /> {text}
-                        <br /> {"</>"}
-                    </div>
-                    {/* Box that pop */}
-                    <div className="popBox absolute h-0 w-0 top-1/2 left-1/2 bg-primary -translate-x-1/2 -translate-y-1/2 z-10 transition-all duration-500 rounded-full"></div>
-                </div>
-            </div>
-        </a>
-    );
-};
