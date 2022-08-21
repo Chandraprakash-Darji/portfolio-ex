@@ -7,14 +7,6 @@
     width: 0.4rem;
 }
 
-::-webkit-scrollbar-button {
-    display: none;
-}
-
-::-webkit-scrollbar-corner {
-    border-radius: 999px;
-}
-
 ::-webkit-scrollbar-thumb {
     background-color: #16b170;
 }
@@ -30,13 +22,22 @@
     @apply w-full h-full;
 }
 .animteSize {
-    animation: animateWidth linear 1s infinite alternate-reverse; 
+    animation: animateWidth linear 1s infinite alternate-reverse;
 }
 @keyframes animateWidth {
     0% {
-        width:100%;
+        width: 100%;
     }
     100% {
         width: 90%;
+    }
+}
+
+@keyframes animateOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
     }
 }
