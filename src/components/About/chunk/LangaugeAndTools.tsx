@@ -13,7 +13,7 @@ const LangaugeAndTools = () => {
             </Heading3>
 
             <div className="mt-5 p-3 pl-0">
-                <ul className="flex flex-wrap justify-center gap-7">
+                <ul className="flex flex-wrap justify-center gap-12 md:gap-7">
                     {AppIcons.map(({ key, path, name }) => (
                         <ToolIcon key={key} path={path} name={name} />
                     ))}

@@ -14,8 +14,8 @@ import vscodeIcon from "./vscode.png";
 const AppIcons = [
     { path: ReactSvg, name: "React JS", key: 1 },
     { path: NextSvg, name: "Next JS", key: 2 },
-    { path: tailwindSvg, name: "Tailwind CSS", key: 3 },
-    { path: SassSvg, name: "Scss || Sass", key: 4 },
+    { path: tailwindSvg, name: "TailwindCSS", key: 3 },
+    { path: SassSvg, name: "Sass", key: 4 },
     { path: JSSvg, name: "JavaScript", key: 5 },
     { path: typescriptSvg, name: "Typescript", key: 6 },
     { path: NodeJSSvg, name: "Node JS", key: 7 },
