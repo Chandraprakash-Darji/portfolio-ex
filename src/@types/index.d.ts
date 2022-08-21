@@ -1,4 +1,3 @@
-
 declare module "*.svg" {
     import * as React from "react";
 
@@ -19,4 +18,5 @@ declare module "*.png" {
 export interface SvgProps {
     size?: number;
     children: React.ReactNode;
+    className?: string;
 }
