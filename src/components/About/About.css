@@ -1,0 +1,28 @@
+#aboutme .animateBelowLine line {
+    fill: transparent;
+    stroke-width: 5;
+    stroke: #00ff94;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+}
+
+#aboutme .animateBelowLine.animate line {
+    animation: animateBelowLine 0.5s linear forwards;
+}
+
+@keyframes animateBelowLine {
+    0% {
+        stroke-dashoffset: 200;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+#aboutme .animateBelowLine #BelowLine_Circle-2 {
+    opacity: 0;
+}
+
+#aboutme .animateBelowLine.animate #BelowLine_Circle-2 {
+    animation: animateOpacity 0.3s ease-out forwards 0.5s;
+}
