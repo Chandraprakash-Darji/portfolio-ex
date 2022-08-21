@@ -62,7 +62,7 @@ const Home = () => {
                     <div className="arc arc-3"></div>
                 </div>
             </a>
-            <div className="curveLine">
+            <div className="curveLine outline-none">
                 <CurveSvg />
             </div>
         </section>
@@ -73,7 +73,7 @@ export default Home;
 
 function CurveSvg() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 878.826 678">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 878.826 678" className="outline-none">
             <g transform="translate(-97.174 -139)">
                 <path
                     id="curveSvgPath"
@@ -82,6 +82,7 @@ function CurveSvg() {
                     fill="none"
                     stroke="#00ff94"
                     strokeWidth="5"
+                    className="outline-none" 
                 />
                 <g id="curveSvgPath-Cirlce--1" transform="translate(0 66)">
                     <circle
