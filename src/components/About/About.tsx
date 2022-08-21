@@ -2,13 +2,13 @@ import { BelowLine, InfoSection, LangaugeAndTools } from ".";
 import useElementOnSecreen from "../../hook/useElementOnSecreen";
 import AnimatedText from "../AnimatedText";
 import Heading2 from "../Dummy/Heading2";
-import './About.css'
+import "./About.css";
 const About = () => {
     const [isVisible, containerRef] = useElementOnSecreen();
 
     return (
         <section
-        id="aboutme"
+            id="aboutme"
             ref={containerRef}
             className={`container mx-auto md:mt-36 xl:mt-72 transition-all duration-500 ease-linear relative ${
                 isVisible ? "translate-x-0" : "opacity-0 translate-y-36"
@@ -16,7 +16,11 @@ const About = () => {
         >
             <div className="flex justify-center items-center">
                 <Heading2>
-                    {isVisible ? <AnimatedText text="Something About Me" /> : ""}
+                    {isVisible ? (
+                        <AnimatedText text="Something About Me" />
+                    ) : (
+                        ""
+                    )}
                     {/* AboutMe */}
                 </Heading2>
             </div>
@@ -24,7 +28,7 @@ const About = () => {
                 <InfoSection />
                 <LangaugeAndTools />
             </div>
-            <div className="absolute -bottom-48 left-1/2 -translate-x-1/2 ">
+            <div className="absolute hidden lg:block lg:-bottom-[13rem] left-1/2 -translate-x-4 ">
                 <BelowLine />
             </div>
         </section>
