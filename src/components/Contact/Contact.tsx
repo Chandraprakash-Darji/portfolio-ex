@@ -9,17 +9,17 @@ const Contact = () => {
         <div
             ref={containerRef}
             id="contact"
-            className={`min-h-[30rem]transition-all duration-500 ease-linear ${
+            className={`min-h-[30rem] transition-all duration-500 ease-linear ${
                 isVisible ? "pt-0" : "opacity-0 pt-36"
             }`}
         >
             <div className="container mx-auto">
-                <div className="flex justify-center">
+                <div className="flex justify-center items-center">
                     <Heading2>
-                        <AnimatedText text="ConnectWithMe" />
+                        {isVisible ? <AnimatedText text="Connect with Me" /> : ""}
                     </Heading2>
                 </div>
-                <div className="flex flex-wrap md:flex-nowrap justify-center items-center md:gap-20 py-16 md:py-32">
+                <div className="flex flex-wrap md:flex-nowrap gap-5 justify-center items-center md:gap-10 py-16 md:pb-20 md:pt-40">
                     <SocialButton
                         text="LinkedIn"
                         href="https://www.linkedin.com/in/chandra-prakash-6065b2224/"
@@ -86,7 +86,7 @@ const Contact = () => {
                     >
                         {" "}
                         <PrimaryText className="hover:underline">
-                            Chandraprakash Darji
+                            Chandra
                         </PrimaryText>
                     </a>{" "}
                     ||
@@ -116,9 +116,6 @@ const SocialButton = ({
             href={href}
             target="_blank"
             rel="noreferrer"
-            // style={{
-            //     transform: `translate(${x}px , ${y}px)`,
-            // }}
             className={`transition-all duration-500 ${className.x} ${className.y}`}
         >
             <div
