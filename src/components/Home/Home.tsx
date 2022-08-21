@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { CurveSvg, DownloadCV } from ".";
 import AnimatedText from "../AnimatedText";
 import "./Home.css";
 
@@ -37,99 +38,10 @@ const Home = () => {
                     text={" Frontend Developer // UI Designer "}
                 />
             </div>
-            <a
-                href="/portfolio.pdf"
-                target={"_blank"}
-                className="magic-puffIn"
-                rel="noreferrer"
-            >
-                <div className="downloadCVWrapper">
-                    {/* Background text `</>` */}
-                    <div className="absolute top-0 left-0 background opacity-20 -rotate-45 flex justify-center items-center h-full w-full text-[13rem] font-black z-10 ">{`</>`}</div>
-                    {/* Download CV btn */}
-
-                    <AnimatedText
-                        as="div"
-                        className="hoverBox h-full w-full flex justify-center items-center z-50 0 cursor-pointer transition-all duration-500 absolute "
-                        text={`<Download CV/>`}
-                    />
-                    {/* Box that pop */}
-                    <div className="popBox absolute h-0 w-0 top-1/2 left-1/2 bg-primary -translate-x-1/2 -translate-y-1/2 z-10 transition-all duration-500 rounded-full"></div>
-
-                    {/* Spinner */}
-                    <div className="arc arc-1"></div>
-                    <div className="arc arc-2"></div>
-                    <div className="arc arc-3"></div>
-                </div>
-            </a>
-            <div className="curveLine outline-none">
-                <CurveSvg />
-            </div>
+            <DownloadCV />
+            <CurveSvg />
         </section>
     );
 };
 
 export default Home;
-
-function CurveSvg() {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 878.826 678" className="outline-none">
-            <g transform="translate(-97.174 -139)">
-                <path
-                    id="curveSvgPath"
-                    d="M5475.719,162.724h-86.277s-1.547,135.657,0,198.591,52.367,167.9,178.905,168.835,396.488-1.733,497.264,0,173.82,84.186,175.553,163.173,0,100.033,0,100.033"
-                    transform="translate(-5289)"
-                    fill="none"
-                    stroke="#00ff94"
-                    strokeWidth="5"
-                    className="outline-none" 
-                />
-                <g id="curveSvgPath-Cirlce--1" transform="translate(0 66)">
-                    <circle
-                        cx="23.5"
-                        cy="23.5"
-                        r="23.5"
-                        transform="translate(162 73)"
-                        fill="rgba(0,255,148,0.57)"
-                    />
-                    <circle
-                        cx="11"
-                        cy="11"
-                        r="11"
-                        transform="translate(175 85)"
-                        fill="#fff"
-                    />
-                </g>
-                <g id="curveSvgPath-Cirlce--2" transform="translate(767 697)">
-                    <circle
-                        cx="23.5"
-                        cy="23.5"
-                        r="23.5"
-                        transform="translate(162 73)"
-                        fill="rgba(0,255,148,0.57)"
-                    />
-                    <circle
-                        cx="11"
-                        cy="11"
-                        r="11"
-                        transform="translate(175 85)"
-                        fill="#fff"
-                    />
-                </g>
-                <text
-                    data-name="&lt;/&gt;"
-                    transform="translate(410 552)"
-                    fill="#fff"
-                    fontSize="69"
-                    fontFamily="SegoeUI-Semibold, Segoe UI"
-                    fontWeight="600"
-                    className="textInSvg"
-                >
-                    <tspan x="0" y="0">
-                        &lt;/&gt;
-                    </tspan>
-                </text>
-            </g>
-        </svg>
-    );
-}
