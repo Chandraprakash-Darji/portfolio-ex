@@ -19,6 +19,16 @@ const Contact = () => {
         </Heading2>
       </div>
       <SocialWrapper />
+      <div className="flex justify-center gap-2 text-xl">
+        <span>Sponser me on Github</span>
+        <iframe
+          src="https://github.com/sponsors/Chandraprakash-Darji/button"
+          title="Sponsor Chandraprakash-Darji"
+          height="35"
+          width="116"
+          style={{ border: 0 }}
+        />
+      </div>
       <Footer />
     </div>
   );

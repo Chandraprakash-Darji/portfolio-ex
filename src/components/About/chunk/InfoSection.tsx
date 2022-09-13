@@ -26,7 +26,7 @@ const InfoSection = () => {
         Now I have the following skills and desire to learn more. I am looking
         forward to learn about Blockchain, Solidity, and Smart Contracts.
       </p>
-      <p>
+      <p className="relative after:content-['</p>'] after:text-mainDark after:text-lg  after:font-sans after:not-italic after:font-normal after:absolute after:-left-10">
         Now I am working on{" "}
         <a href="https://github.com/ax-studios/frontend-web">
           <PrimaryText className="hover:underline">College CMS</PrimaryText>
@@ -34,16 +34,6 @@ const InfoSection = () => {
         I would like if you contribute to it.
         <br />
       </p>
-      <div className="flex gap-2 relative after:content-['</p>'] after:text-mainDark after:text-lg  after:font-sans after:not-italic after:font-normal after:absolute after:-left-10 after:top-8">
-        <span>Sponser me on Github</span>
-        <iframe
-          src="https://github.com/sponsors/Chandraprakash-Darji/button"
-          title="Sponsor Chandraprakash-Darji"
-          height="35"
-          width="116"
-          style={{ border: 0 }}
-        />
-      </div>
     </div>
   );
 };
