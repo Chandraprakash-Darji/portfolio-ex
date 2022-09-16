@@ -1,12 +1,12 @@
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import About from './components/About';
+import Contact from './components/Contact';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import Projects from './components/Projects';
 
 function App() {
     return (
-        <div className="bg-dark min-h-screen text-main font-mono overflow-x-hidden">
+        <div className="min-h-screen overflow-x-hidden bg-dark font-mono text-main">
             <Navbar />
             <Home />
             <About />

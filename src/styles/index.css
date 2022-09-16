@@ -19,7 +19,7 @@
     @apply text-dark;
 }
 .hoverBox:hover + .popBox {
-    @apply w-full h-full;
+    @apply h-full w-full;
 }
 .animteSize {
     animation: animateWidth linear 1s infinite alternate-reverse;

@@ -1,4 +1,4 @@
-import { menuOptions, NavItem } from "..";
+import { menuOptions, NavItem } from '..';
 
 interface Props {
     from: number;

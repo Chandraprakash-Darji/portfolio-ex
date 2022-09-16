@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 const useElementOnSecreen = (
     threshold = 0.1
@@ -19,7 +19,7 @@ const useElementOnSecreen = (
 
     const optios: IntersectionObserverInit = {
         root: null,
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: threshold,
     };
 

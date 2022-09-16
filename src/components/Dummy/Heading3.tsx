@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 interface Props {
     children: ReactNode;
     extra?: string;
@@ -6,7 +6,7 @@ interface Props {
 const Heading3 = ({ children, extra }: Props) => {
     return (
         <h3
-            className={`relative text-2xl md:text-4xl font-bold italic font-Roboto tracking-wide before:content-['<h2>'] before:text-mainDark after:content-['</h2>'] after:text-mainDark before:text-base md:before:text-lg  after:text-base md:after:text-lg after:not-italic after:font-normal before:not-italic before:font-normal ${
+            className={`relative font-Roboto text-2xl font-bold italic tracking-wide before:text-base before:font-normal before:not-italic before:text-mainDark before:content-['<h2>'] after:text-base after:font-normal  after:not-italic after:text-mainDark after:content-['</h2>'] md:text-4xl md:before:text-lg md:after:text-lg ${
                 extra && extra
             }`}
         >

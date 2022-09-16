@@ -1,17 +1,17 @@
-import { useState } from "react";
-import AltIcon from "../../assets/Icons/AltIcon";
-import GithubIcon from "../../assets/Icons/Github";
-import GlobeSvg from "../../assets/Icons/GlobeSvg";
-import LeftArrow from "../../assets/Icons/LeftArrow";
-import { FilmpireHome, filmpireLogo } from "../../assets/images";
-import useElementOnSecreen from "../../hook/useElementOnSecreen";
-import AnimatedText from "../AnimatedText";
-import Heading2 from "../Dummy/Heading2";
-import IconBtn from "../Dummy/IconBtn";
-import PrimaryText from "../Dummy/PrimaryText";
-import "./Project.css";
+import { useState } from 'react';
+import AltIcon from '../../assets/Icons/AltIcon';
+import GithubIcon from '../../assets/Icons/Github';
+import GlobeSvg from '../../assets/Icons/GlobeSvg';
+import LeftArrow from '../../assets/Icons/LeftArrow';
+import { FilmpireHome, filmpireLogo } from '../../assets/images';
+import useElementOnSecreen from '../../hook/useElementOnSecreen';
+import AnimatedText from '../AnimatedText';
+import Heading2 from '../Dummy/Heading2';
+import IconBtn from '../Dummy/IconBtn';
+import PrimaryText from '../Dummy/PrimaryText';
+import './Project.css';
 
-const projectList = ["filpire", "discord mini", "ui kit", "issue tracker"];
+const projectList = ['filpire', 'discord mini', 'ui kit', 'issue tracker'];
 
 const Project = () => {
     const [isVisible, containerRef] = useElementOnSecreen();
@@ -20,67 +20,67 @@ const Project = () => {
         <section
             id="myportfolio"
             ref={containerRef}
-            className={`container mx-auto mt-10 lg:mt-52 transition-all duration-500 ease-linear relative ${
-                isVisible ? "translate-y-0" : "opacity-0 translate-y-36"
+            className={`container relative mx-auto mt-10 transition-all duration-500 ease-linear lg:mt-52 ${
+                isVisible ? 'translate-y-0' : 'translate-y-36 opacity-0'
             }`}
         >
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
                 <Heading2>
-                    {isVisible ? <AnimatedText text="My Portfolio" /> : ""}
+                    {isVisible ? <AnimatedText text="My Portfolio" /> : ''}
                 </Heading2>
             </div>
-            <div className="flex flex-col lg:flex-row py-10 lg:py-16 gap-10">
+            <div className="flex flex-col gap-10 py-10 lg:flex-row lg:py-16">
                 <div className="w-full">
-                    <figure className="projectImg h-[20rem] lg:h-[30rem] mx-auto aspect-square rounded-full relative group ">
+                    <figure className="projectImg group relative mx-auto aspect-square h-[20rem] rounded-full lg:h-[30rem] ">
                         <img
                             src={FilmpireHome}
                             alt="HeroImg"
-                            className="w-full h-full object-cover object-left-top rounded-full"
+                            className="h-full w-full rounded-full object-cover object-left-top"
                         />
-                        <figure className="absolute left-1/2 -translate-x-1/2 bottom-16 bg-dark px-2 py-1 rounded-2xl transition-all duration-300 ">
+                        <figure className="absolute left-1/2 bottom-16 -translate-x-1/2 rounded-2xl bg-dark px-2 py-1 transition-all duration-300 ">
                             <img
                                 src={filmpireLogo}
                                 alt="project logo"
                                 style={{
-                                    filter: "hue-rotate(129deg) brightness(10)",
+                                    filter: 'hue-rotate(129deg) brightness(10)',
                                 }}
                             />
                         </figure>
-                        <div className="w-full aspect-square border-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" />
-                        <div className="project-img-ring w-full aspect-square border-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" />
-                        <div className="project-img-ring project-img-ring--1 w-full aspect-square border-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" />
-                        <div className="project-img-ring project-img-ring--2 w-full aspect-square border-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" />
-                        <div className="project-img-ring project-img-ring--3 w-full aspect-square border-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" />
+                        <div className="absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 rounded-full border-4" />
+                        <div className="project-img-ring absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 rounded-full border-4" />
+                        <div className="project-img-ring project-img-ring--1 absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 rounded-full border-4" />
+                        <div className="project-img-ring project-img-ring--2 absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 rounded-full border-4" />
+                        <div className="project-img-ring project-img-ring--3 absolute top-1/2 left-1/2 aspect-square w-full -translate-x-1/2 -translate-y-1/2 rounded-full border-4" />
                     </figure>
                 </div>
                 <div className="w-full py-7 px-3 lg:px-0">
-                    <PrimaryText className="text-5xl block text-center lg:text-left lg:text-7xl font-bold font-RobotoCondensed tracking-wider">
+                    <PrimaryText className="block text-center font-RobotoCondensed text-5xl font-bold tracking-wider lg:text-left lg:text-7xl">
                         Filmpire
                     </PrimaryText>
-                    <p className="text-xl lg:text-2xl mt-5 leading-relaxed">
+                    <p className="mt-5 text-xl leading-relaxed lg:text-2xl">
                         Filmpire is movie app where you can search for movie and
                         add to watchlist and Favorite's. You get the
                         recommendation for the similar movies and you have
                         option to get movies by genre.
                     </p>
-                    <PrimaryText className="mt-5 mb-10 lg:text-xl gap-4 flex">
-                        {["mui", "redux", "react", "typescript"].map((tool) => (
+                    <PrimaryText className="mt-5 mb-10 flex gap-4 lg:text-xl">
+                        {['mui', 'redux', 'react', 'typescript'].map((tool) => (
                             <span
                                 key={tool}
-                                className="border-primary border rounded-lg p-2 px-3 capitalize hover:bg-primary hover:text-dark font-bold"
+                                className="rounded-lg border border-primary p-2 px-3 font-bold capitalize hover:bg-primary hover:text-dark"
                             >
                                 {tool}
                             </span>
                         ))}
                     </PrimaryText>
-                    <div className="lg:text-xl flex gap-4 lg:gap-0 flex-wrap ">
+                    <div className="flex flex-wrap gap-4 lg:gap-0 lg:text-xl ">
                         <a
                             href="https://filmpirecp.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="border-primary border rounded-xl lg:rounded-none lg:rounded-l-xl py-3 px-5 capitalize hover:bg-primary group w-max"
+                            className="group w-max rounded-xl border border-primary py-3 px-5 capitalize hover:bg-primary lg:rounded-none lg:rounded-l-xl"
                         >
-                            <PrimaryText className="flex justify-center items-center gap-3 group-hover:text-dark">
+                            <PrimaryText className="flex items-center justify-center gap-3 group-hover:text-dark">
                                 Live
                                 <IconBtn>
                                     <GlobeSvg />
@@ -91,9 +91,9 @@ const Project = () => {
                             href="https://github.com/Chandraprakash-Darji/filmpire_"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="border-primary border py-3 px-5 w-max capitalize hover:bg-primary rounded-xl lg:rounded-none group"
+                            className="group w-max rounded-xl border border-primary py-3 px-5 capitalize hover:bg-primary lg:rounded-none"
                         >
-                            <PrimaryText className="flex justify-center items-center gap-3 group-hover:text-dark">
+                            <PrimaryText className="flex items-center justify-center gap-3 group-hover:text-dark">
                                 Project Code
                                 <IconBtn>
                                     <GithubIcon />
@@ -102,9 +102,9 @@ const Project = () => {
                         </a>
                         <a
                             href="/projects/filmpire"
-                            className="border-primary border py-3 px-5 w-max capitalize hover:bg-primary rounded-xl lg:rounded-none lg:rounded-r-xl  group"
+                            className="group w-max rounded-xl border border-primary py-3 px-5 capitalize hover:bg-primary lg:rounded-none  lg:rounded-r-xl"
                         >
-                            <PrimaryText className="flex justify-center items-center gap-3 group-hover:text-dark">
+                            <PrimaryText className="flex items-center justify-center gap-3 group-hover:text-dark">
                                 Read more
                                 <IconBtn>
                                     <AltIcon />
@@ -114,7 +114,7 @@ const Project = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between items-center px-5 lg:px-16 xl:px-32 lg:m-20">
+            <div className="flex items-center justify-between px-5 lg:m-20 lg:px-16 xl:px-32">
                 <button
                     onClick={() =>
                         setCurrentproject((p) => {
@@ -125,7 +125,7 @@ const Project = () => {
                             }
                         })
                     }
-                    className="p-5 md:p-10 rounded-full border-2 border-main w-max hover:scale-125 transition-all duration-300 active:scale-110"
+                    className="w-max rounded-full border-2 border-main p-5 transition-all duration-300 hover:scale-125 active:scale-110 md:p-10"
                 >
                     <PrimaryText>
                         <IconBtn size={50} className="inline-block">
@@ -133,9 +133,9 @@ const Project = () => {
                         </IconBtn>
                     </PrimaryText>
                 </button>
-                <div className="bg-primary/20 w-[35vw] h-2 rounded-3xl relative overflow-hidden">
+                <div className="relative h-2 w-[35vw] overflow-hidden rounded-3xl bg-primary/20">
                     <div
-                        className="bg-primary absolute top-0 left-0 h-full transition-all duration-300"
+                        className="absolute top-0 left-0 h-full bg-primary transition-all duration-300"
                         style={{
                             width: `${
                                 ((currentproject + 1) / projectList.length) *
@@ -145,7 +145,7 @@ const Project = () => {
                     />
                 </div>
                 <button
-                    className="p-5 md:p-10 rounded-full border-2 border-main w-max hover:scale-125 transition-all duration-300 active:scale-110"
+                    className="w-max rounded-full border-2 border-main p-5 transition-all duration-300 hover:scale-125 active:scale-110 md:p-10"
                     onClick={() =>
                         setCurrentproject((p) => (p + 1) % projectList.length)
                     }
@@ -153,14 +153,14 @@ const Project = () => {
                     <PrimaryText>
                         <IconBtn
                             size={50}
-                            className="rotate-180 inline-block h-full"
+                            className="inline-block h-full rotate-180"
                         >
                             <LeftArrow />
                         </IconBtn>
                     </PrimaryText>
                 </button>
             </div>
-            <div className="absolute hidden lg:block left-[48%] -bottom-[20rem] outline-none -z-10">
+            <div className="absolute left-[48%] -bottom-[20rem] -z-10 hidden outline-none lg:block">
                 <ProjectCurve />
             </div>
         </section>
@@ -180,7 +180,7 @@ const ProjectCurve = () => {
             height="616"
             viewBox="0 0 667.615 616"
             className={`projectCurve outline-none ${
-                isVisible ? "animate" : ""
+                isVisible ? 'animate' : ''
             }`}
         >
             <g id="ProjectCurve" transform="translate(-387 -45)">

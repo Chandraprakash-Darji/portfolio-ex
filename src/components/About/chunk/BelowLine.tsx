@@ -1,7 +1,7 @@
-import useElementOnSecreen from "../../../hook/useElementOnSecreen";
+import useElementOnSecreen from '../../../hook/useElementOnSecreen';
 
 const BelowLine = () => {
-    const [isVisible, containerRef] = useElementOnSecreen(.5);
+    const [isVisible, containerRef] = useElementOnSecreen(0.5);
 
     return (
         <svg
@@ -9,7 +9,7 @@ const BelowLine = () => {
             width="47"
             height="258"
             ref={containerRef}
-            className={`animateBelowLine ${isVisible ? "animate" : ""}`}
+            className={`animateBelowLine ${isVisible ? 'animate' : ''}`}
         >
             <g id="BelowLineContainer" transform="translate(-162 -139)">
                 <line

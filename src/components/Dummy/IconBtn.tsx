@@ -1,4 +1,4 @@
-import { SvgProps } from "../../@types";
+import { SvgProps } from '../../@types';
 
 const IconBtn = ({ size, children, className }: SvgProps) => {
     const sizeIcon = size ? size : 24;
@@ -6,9 +6,9 @@ const IconBtn = ({ size, children, className }: SvgProps) => {
         <span
             style={{ width: sizeIcon }}
             className={
-                "justify-center items-center flex aspect-square" + className
+                'flex aspect-square items-center justify-center' + className
                     ? className
-                    : ""
+                    : ''
             }
         >
             {children}
