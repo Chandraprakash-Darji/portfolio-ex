@@ -23,10 +23,10 @@ const MobileMenu = () => {
                 </ul>
             </nav>
             <div
-                className={`absolute z-[60] bg-gradient-to-br from-primary/10 to-dark/10 backdrop-blur transition-all duration-300 sm:hidden  ${
+                className={`absolute z-[60] bg-gradient-to-br from-primary/10 to-dark/10 backdrop-blur transition-all duration-200 sm:hidden w-screen h-screen origin-top ${
                     openState
-                        ? 'visible h-screen w-screen opacity-100'
-                        : 'invisible h-0 w-0 opacity-0'
+                        ? 'visible scale-100 opacity-100'
+                        : 'invisible scale-0 opacity-0'
                 }`}
                 onClick={() => setOpenState(false)}
             ></div>

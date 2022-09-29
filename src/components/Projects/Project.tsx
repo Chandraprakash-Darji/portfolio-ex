@@ -11,7 +11,7 @@ import IconBtn from '../Dummy/IconBtn';
 import PrimaryText from '../Dummy/PrimaryText';
 import './Project.css';
 
-const projectList = ['filpire', 'discord mini', 'ui kit', 'issue tracker'];
+const projectList = ['filpire'];
 
 const Project = () => {
     const [isVisible, containerRef] = useElementOnSecreen();
@@ -116,6 +116,7 @@ const Project = () => {
             </div>
             <div className="flex items-center justify-between px-5 lg:m-20 lg:px-16 xl:px-32">
                 <button
+                    disabled
                     onClick={() =>
                         setCurrentproject((p) => {
                             if (p === 0) {
@@ -125,7 +126,7 @@ const Project = () => {
                             }
                         })
                     }
-                    className="w-max rounded-full border-2 border-main p-5 transition-all duration-300 hover:scale-125 active:scale-110 md:p-10"
+                    className="hidden w-max rounded-full border-2 border-main p-5 transition-all duration-300 hover:scale-125 active:scale-110 disabled:opacity-50 disabled:hover:scale-100 md:p-10 lg:block"
                 >
                     <PrimaryText>
                         <IconBtn size={50} className="inline-block">
@@ -133,7 +134,8 @@ const Project = () => {
                         </IconBtn>
                     </PrimaryText>
                 </button>
-                <div className="relative h-2 w-[35vw] overflow-hidden rounded-3xl bg-primary/20">
+
+                <div className="relative mx-auto h-2 w-[35vw] overflow-hidden rounded-3xl bg-primary/20">
                     <div
                         className="absolute top-0 left-0 h-full bg-primary transition-all duration-300"
                         style={{
@@ -144,8 +146,10 @@ const Project = () => {
                         }}
                     />
                 </div>
+
                 <button
-                    className="w-max rounded-full border-2 border-main p-5 transition-all duration-300 hover:scale-125 active:scale-110 md:p-10"
+                    disabled
+                    className="hidden w-max rounded-full border-2 border-main p-5 transition-all duration-300 hover:scale-125 active:scale-110 disabled:opacity-50 disabled:hover:scale-100 md:p-10 lg:block"
                     onClick={() =>
                         setCurrentproject((p) => (p + 1) % projectList.length)
                     }
