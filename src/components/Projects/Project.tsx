@@ -61,7 +61,7 @@ const Project = () => {
                         Filmpire is movie app where you can search for movie and
                         add to watchlist and Favorite's. You get the
                         recommendation for the similar movies and you have
-                        option to get movies by genre.
+                        option to get movies by genre with the TMDB API.
                     </p>
                     <PrimaryText className="mt-5 mb-10 flex gap-4 lg:text-xl">
                         {['mui', 'redux', 'react', 'typescript'].map((tool) => (
