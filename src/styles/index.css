@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body{
+html,
+body {
     scroll-behavior: smooth;
 }
 
@@ -22,19 +23,9 @@ html,body{
 .hoverBox:hover {
     @apply text-dark;
 }
+
 .hoverBox:hover + .popBox {
     @apply h-full w-full;
-}
-.animteSize {
-    animation: animateWidth linear 1s infinite alternate-reverse;
-}
-@keyframes animateWidth {
-    0% {
-        width: 100%;
-    }
-    100% {
-        width: 90%;
-    }
 }
 
 @keyframes animateOpacity {

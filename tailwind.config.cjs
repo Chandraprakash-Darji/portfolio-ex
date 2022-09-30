@@ -18,6 +18,19 @@ module.exports = {
                 ],
                 mono: ["Roboto Mono", ...defaultTheme.fontFamily.mono],
             },
+            keyframes: {
+                pop: {
+                    '0%': {
+                        width: '100%'
+                    },
+                    '100%': {
+                        width: '90%'
+                    }
+                }
+            },
+            animation: {
+                pop: 'pop linear 1s alternate infinite',
+            }
         },
     },
     plugins: [require("tailwindcss-magic")],

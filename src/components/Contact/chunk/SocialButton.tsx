@@ -15,7 +15,7 @@ const SocialButton = ({ text, href, className }: SocialButtonProps) => {
             <div
                 className={`${className.size} flex aspect-square items-center justify-center`}
             >
-                <div className="animteSize relative aspect-square w-full rounded-full border-2 border-primary text-main md:w-full  md:text-2xl">
+                <div className="animate-pop  relative aspect-square w-full rounded-full border-2 border-primary text-main md:w-full  md:text-2xl ">
                     <div className="hoverBox 0 absolute z-50 flex h-full w-full cursor-pointer items-center justify-center text-center transition-all duration-500">
                         {'<>'}
                         <br /> {text}
