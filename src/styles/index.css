@@ -16,7 +16,7 @@ html,body{
 }
 
 * {
-    outline: #16b17030 solid 1px;
+    outline: #16b17030 solid 2px;
 }
 
 .hoverBox:hover {

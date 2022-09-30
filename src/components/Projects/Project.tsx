@@ -73,7 +73,7 @@ const Project = () => {
                             </span>
                         ))}
                     </PrimaryText>
-                    <div className="flex flex-wrap gap-4 lg:gap-0 lg:text-xl ">
+                    <div className="flex flex-wrap gap-4 gap-x-2 lg:gap-0 lg:text-xl">
                         <a
                             href="https://filmpirecp.vercel.app/"
                             target="_blank"
@@ -100,17 +100,18 @@ const Project = () => {
                                 </IconBtn>
                             </PrimaryText>
                         </a>
-                        <a
-                            href="/projects/filmpire"
-                            className="group w-max rounded-xl border border-primary py-3 px-5 capitalize hover:bg-primary lg:rounded-none  lg:rounded-r-xl"
+                        <button
+                            // href="/projects/filmpire"
+                            className="group w-max rounded-xl border border-primary py-3 px-5 capitalize hover:bg-primary disabled:cursor-not-allowed  disabled:hover:border-primary disabled:hover:bg-transparent disabled:hover:opacity-50 lg:rounded-none lg:rounded-r-xl"
+                            disabled
                         >
-                            <PrimaryText className="flex items-center justify-center gap-3 group-hover:text-dark">
+                            <PrimaryText className="flex items-center justify-center gap-3 group-hover:text-dark group-disabled:group-hover:text-primary">
                                 Read more
                                 <IconBtn>
                                     <AltIcon />
                                 </IconBtn>
                             </PrimaryText>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
