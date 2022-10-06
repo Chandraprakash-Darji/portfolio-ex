@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-    scroll-behavior: smooth;
+@layer base {
+    * {
+        outline: #16b17030 solid 2px;
+    }
+
+    html,
+    body {
+        scroll-behavior: smooth;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -14,10 +20,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: #16b170;
-}
-
-* {
-    outline: #16b17030 solid 2px;
 }
 
 .hoverBox:hover {
