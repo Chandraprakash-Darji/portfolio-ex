@@ -5,7 +5,7 @@ const SocialWrapper = () => {
         <div className="flex flex-wrap items-center justify-center gap-5 py-16 md:flex-nowrap md:gap-10 md:pb-20 md:pt-48">
             <SocialButton
                 text="LinkedIn"
-                href="https://www.linkedin.com/in/chandra-prakash-6065b2224/"
+                href="https://www.linkedin.com/in/Chandraprakash-Darji/"
                 className={{
                     x: 'md:-translate-x-16',
                     y: 'md:-translate-y-36',
