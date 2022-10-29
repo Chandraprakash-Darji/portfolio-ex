@@ -1,5 +1,5 @@
 import { ToolIcon } from '..';
-import AppIcons from '../../../assets/Icons';
+import AppIcons from '../../../lib/data/AppIcons';
 import Heading3 from '../../Dummy/Heading3';
 import PrimaryText from '../../Dummy/PrimaryText';
 

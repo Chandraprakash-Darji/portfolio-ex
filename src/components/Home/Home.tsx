@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { CurveSvg, DownloadCV } from '.';
 import AnimatedText from '../AnimatedText';
-import './Home.css';
 
 const Home = () => {
     useEffect(() => {

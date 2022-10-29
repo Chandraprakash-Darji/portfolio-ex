@@ -26,10 +26,20 @@ module.exports = {
                     '100%': {
                         width: '90%'
                     }
+                },
+                opacity: {
+                    '0%': {
+                        opacity: 0
+                    },
+                    '100%': {
+                        opacity: 100
+                    }
                 }
+
             },
             animation: {
                 pop: 'pop linear 1s alternate infinite',
+                opacity: 'opacity 0.3s ease-out forwards',
             }
         },
     },
