@@ -180,7 +180,6 @@ export default Project;
 
 const ProjectCurve = () => {
   const [isVisible, containerRef] = useElementOnSecreen(0.3);
-  console.log(styles);
   return (
     <svg
       ref={containerRef}
