@@ -5,7 +5,7 @@ import Navbar from '../components/widget/Navbar';
 
 const Landing: NextPage = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden font-mono">
+    <div className="relative min-h-screen overflow-x-hidden font-mono">
       <Head>
         <title>Portfolio - Chandraprakash Darji</title>
       </Head>

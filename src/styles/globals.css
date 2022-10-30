@@ -29,3 +29,4 @@
 .hoverBox:hover + .popBox {
   @apply h-full w-full;
 }
+
