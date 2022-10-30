@@ -1,10 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import About from "../components/About";
-import Contact from "../components/Contact";
-import Home from "../components/Home";
-import Navbar from "../components/Navbar";
-import Projects from "../components/Projects";
+import Navbar from "../components/core/widget/Navbar";
+import { About, Contact, Hero, Projects } from "../components/pages/Home";
 
 const Landing: NextPage = () => {
   return (
@@ -13,7 +10,7 @@ const Landing: NextPage = () => {
         <title>Portfolio - Chandraprakash Darji</title>
       </Head>
       <Navbar />
-      <Home />
+      <Hero />
       <About />
       <Projects />
       <Contact />
