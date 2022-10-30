@@ -1,7 +1,7 @@
-import { NextPage } from "next";
-import Head from "next/head";
-import { About, Contact, Hero, Projects } from "../components/pages/Home";
-import Navbar from "../components/widget/Navbar";
+import { NextPage } from 'next';
+import Head from 'next/head';
+import { About, Contact, Hero, Projects } from '../components/pages/Home';
+import Navbar from '../components/widget/Navbar';
 
 const Landing: NextPage = () => {
   return (

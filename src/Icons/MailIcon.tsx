@@ -1,4 +1,6 @@
-const MailIcon = () => {
+import { FC } from 'react';
+
+const MailIcon: FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

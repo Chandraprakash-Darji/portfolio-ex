@@ -9,7 +9,7 @@
 
   html,
   body {
-    @apply text-base-content scroll-smooth bg-base-100;
+    @apply scroll-smooth bg-base-100 text-base-content;
   }
 }
 

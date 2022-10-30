@@ -1,11 +1,12 @@
-import Image from "next/image";
+import Image from 'next/image';
+import { FC } from 'react';
 
-type ToolIconProps = {
+interface ToolIconProps {
   name: string;
   path: string;
-};
+}
 
-const ToolIcon = ({ name, path }: ToolIconProps) => {
+const ToolIcon: FC<ToolIconProps> = ({ name, path }) => {
   return (
     <li
       className="group relative flex items-center justify-center rounded-full border border-primary/70 bg-primary/20 p-4 shadow-md shadow-base-content/20 transition-all duration-300 hover:rounded-[4rem] hover:border-primary/50 hover:bg-base-content/5 hover:shadow-none md:rounded-xl"

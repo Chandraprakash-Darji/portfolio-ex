@@ -1,6 +1,7 @@
-import styles from "../Home.module.css";
+import { FC } from 'react';
+import styles from '../Home.module.css';
 
-export default function CurveSvg() {
+const CurveSvg: FC = () => {
   return (
     <div className={`${styles.curveLine} outline-none`}>
       <svg
@@ -67,4 +68,6 @@ export default function CurveSvg() {
       </svg>
     </div>
   );
-}
+};
+
+export default CurveSvg;

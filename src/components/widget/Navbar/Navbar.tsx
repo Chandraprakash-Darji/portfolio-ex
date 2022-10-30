@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-import { MobileMenu, OpenMenuBtn, SmNav } from ".";
+import { createContext, FC, useEffect, useState } from 'react';
+import { MobileMenu, OpenMenuBtn, SmNav } from '.';
 
 interface OpenContextProps {
   openState: boolean;
@@ -11,10 +11,10 @@ export const OpenContext = createContext<OpenContextProps>({
   setOpenState: () => {},
 });
 
-const Navbar = () => {
+const Navbar: FC = () => {
   const [openState, setOpenState] = useState(false);
   useEffect(() => {
-    document.body.style.overflowY = openState ? "hidden" : "scroll";
+    document.body.style.overflowY = openState ? 'hidden' : 'scroll';
   }, [openState]);
 
   return (

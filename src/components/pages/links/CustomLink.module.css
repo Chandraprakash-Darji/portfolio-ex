@@ -1,5 +1,5 @@
 .wrapper {
-  @apply relative mx-auto h-20 w-44 outline-none md:h-28 md:w-[18rem] shrink-0;
+  @apply relative mx-auto h-20 w-44 shrink-0 outline-none md:h-28 md:w-[18rem];
 }
 
 .bg {

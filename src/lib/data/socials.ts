@@ -14,9 +14,10 @@ const socials = [
   {
     name: 'Mail',
     href: 'mailto:prakashchandra3786@gmail.com',
-  },{
-    name:'instagram',
-    href:'https://www.instagram.com/chandraprakash_7852/'
-  }
+  },
+  {
+    name: 'instagram',
+    href: 'https://www.instagram.com/chandraprakash_7852/',
+  },
 ];
 export default socials;

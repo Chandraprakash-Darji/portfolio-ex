@@ -1,18 +1,18 @@
-import Image from "next/image";
-import { useState } from "react";
+import Image from 'next/image';
+import { FC, useState } from 'react';
 import {
-    AltIcon,
-    GithubIcon,
-    GlobeIcon,
-    LeftArrowIcon
-} from "../../../../Icons";
-import useElementOnSecreen from "../../../../lib/hooks/useElementOnSecreen";
-import AnimatedText from "../../../widget/AnimatedText";
-import Heading2 from "../../../widget/Headings/Heading2";
-import styles from "./Project.module.css";
-const projectList = ["filpire"];
+  AltIcon,
+  GithubIcon,
+  GlobeIcon,
+  LeftArrowIcon,
+} from '../../../../Icons';
+import useElementOnSecreen from '../../../../lib/hooks/useElementOnSecreen';
+import AnimatedText from '../../../widget/AnimatedText';
+import Heading2 from '../../../widget/Headings/Heading2';
+import styles from './Project.module.css';
+const projectList = ['filpire'];
 
-const Projects = () => {
+const Projects: FC = () => {
   const [isVisible, containerRef] = useElementOnSecreen();
   const [currentproject, setCurrentproject] = useState(1);
   return (
@@ -20,12 +20,12 @@ const Projects = () => {
       id="myportfolio"
       ref={containerRef}
       className={`container relative mx-auto mt-10 transition-all duration-500 ease-linear lg:mt-52 ${
-        isVisible ? "translate-y-0" : "translate-y-36 opacity-0"
+        isVisible ? 'translate-y-0' : 'translate-y-36 opacity-0'
       }`}
     >
       <div className="flex items-center justify-center">
         <Heading2>
-          {isVisible ? <AnimatedText text="My Portfolio" /> : ""}
+          {isVisible ? <AnimatedText text="My Portfolio" /> : ''}
         </Heading2>
       </div>
       <div className="flex flex-col gap-10 py-10 lg:flex-row lg:py-16">
@@ -42,11 +42,11 @@ const Projects = () => {
             <figure className="absolute left-1/2 bottom-16 -translate-x-1/2 rounded-2xl bg-base-100 px-2 py-1 transition-all duration-300 ">
               <div className="relative h-20 w-56">
                 <Image
-                  src={"/assets/images/filmpire-logo.png"}
+                  src={'/assets/images/filmpire-logo.png'}
                   layout="fill"
                   alt="project logo"
                   style={{
-                    filter: "hue-rotate(129deg) brightness(10)",
+                    filter: 'hue-rotate(129deg) brightness(10)',
                   }}
                 />
               </div>
@@ -76,7 +76,7 @@ const Projects = () => {
             movies and you have option to get movies by genre with the TMDB API.
           </p>
           <span className="mt-5 mb-10 flex gap-4 text-primary lg:text-xl">
-            {["mui", "redux", "react", "typescript"].map((tool) => (
+            {['mui', 'redux', 'react', 'typescript'].map((tool) => (
               <span
                 key={tool}
                 className="rounded-lg border border-primary p-2 px-3 font-bold capitalize hover:bg-primary hover:text-base-100"
@@ -178,7 +178,7 @@ const Projects = () => {
 
 export default Projects;
 
-const ProjectCurve = () => {
+const ProjectCurve: FC = () => {
   const [isVisible, containerRef] = useElementOnSecreen(0.3);
   return (
     <svg
@@ -188,7 +188,7 @@ const ProjectCurve = () => {
       height="616"
       viewBox="0 0 667.615 616"
       className={`${styles.projectCurve} outline-none ${
-        isVisible ? styles.animate : ""
+        isVisible ? styles.animate : ''
       }`}
     >
       <g id="ProjectCurve" transform="translate(-387 -45)">

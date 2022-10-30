@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import {
   GithubIcon,
   Instagramicon,
@@ -6,8 +7,12 @@ import {
   TwitterIcon,
 } from '../../Icons';
 
-const useSocialIcons = () => {
-  const Icons = {
+interface IconsType {
+  [key: string]: ReactElement;
+}
+
+const useSocialIcons = (): IconsType => {
+  const Icons: IconsType = {
     instagram: <Instagramicon />,
     github: <GithubIcon />,
     linkedin: <LinkedInIcon />,

@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,7 +8,7 @@ import linkTree from '../lib/data/LinkTree';
 import socials from '../lib/data/socials';
 import useSocialIcons from '../lib/hooks/useSocialIcons';
 
-const Links = () => {
+const Links: NextPage = () => {
   const socialIcons = useSocialIcons();
   return (
     <div className="min-h-screen">
@@ -19,6 +20,7 @@ const Links = () => {
           <Image
             src="https://github.com/Chandraprakash-Darji.png"
             layout="fill"
+            alt="Chandraprakash Darji"
           />
         </div>
         <h1 className="mt-6 font-RobotoCondensed text-5xl font-bold">

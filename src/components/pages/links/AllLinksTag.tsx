@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from './AllLinksTag.module.css';
 
-const AllLinksTag = () => {
+const AllLinksTag: FC = () => {
   return (
     <p className={styles.tag}>
       <span className={styles.leftArr}></span>

@@ -8,18 +8,18 @@
   }
 }
 .downloadCVWrapper .arc {
-  @apply before:bg-base-content after:bg-base-content absolute  rounded-full border-transparent before:absolute before:h-3 before:w-3  before:rounded-full after:absolute after:h-3 after:w-3 after:rounded-full;
+  @apply absolute rounded-full border-transparent  before:absolute before:h-3 before:w-3 before:rounded-full before:bg-base-content  after:absolute after:h-3 after:w-3 after:rounded-full after:bg-base-content;
 }
 .downloadCVWrapper .arc_1 {
-  @apply border-r-base-content -left-[5%] -top-[5%] h-[110%] w-[110%] border-2 before:top-7 before:right-7 after:bottom-7 after:right-7 lg:before:top-10 lg:before:right-10 lg:after:bottom-10 lg:after:right-10;
+  @apply -left-[5%] -top-[5%] h-[110%] w-[110%] border-2 border-r-base-content before:top-7 before:right-7 after:bottom-7 after:right-7 lg:before:top-10 lg:before:right-10 lg:after:bottom-10 lg:after:right-10;
   animation: spin 2s linear infinite;
 }
 .downloadCVWrapper .arc_2 {
-  @apply border-l-base-content -left-[10%] -top-[10%] h-[120%] w-[120%] border-2 before:top-9 before:left-7 after:bottom-9 after:left-7 lg:before:top-10 lg:before:left-11 lg:after:bottom-10 lg:after:left-11;
+  @apply -left-[10%] -top-[10%] h-[120%] w-[120%] border-2 border-l-base-content before:top-9 before:left-7 after:bottom-9 after:left-7 lg:before:top-10 lg:before:left-11 lg:after:bottom-10 lg:after:left-11;
   animation: spin 1.8s linear infinite;
 }
 .downloadCVWrapper .arc_3 {
-  @apply border-t-base-content border-l-base-content -left-[15%] -top-[15%] h-[130%] w-[130%] border-2 before:left-8 before:bottom-9 after:right-8 after:top-9 lg:before:left-12 lg:before:bottom-11 lg:after:right-12 lg:after:top-11;
+  @apply -left-[15%] -top-[15%] h-[130%] w-[130%] border-2 border-t-base-content border-l-base-content before:left-8 before:bottom-9 after:right-8 after:top-9 lg:before:left-12 lg:before:bottom-11 lg:after:right-12 lg:after:top-11;
   animation: spin 1.6s linear infinite;
 }
 .curveLine {

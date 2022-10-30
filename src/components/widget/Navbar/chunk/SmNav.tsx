@@ -1,4 +1,5 @@
-import { menuOptions, NavItem } from "..";
+import { FC } from 'react';
+import { menuOptions, NavItem } from '..';
 
 interface Props {
   from: number;
@@ -6,7 +7,7 @@ interface Props {
   isLeft?: true;
 }
 
-const SmNav = ({ from, to, isLeft }: Props) => {
+const SmNav: FC<Props> = ({ from, to, isLeft }) => {
   return (
     <nav className="hidden sm:block">
       <ul className="flex flex-col gap-2">

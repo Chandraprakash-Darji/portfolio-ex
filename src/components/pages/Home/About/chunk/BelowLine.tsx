@@ -1,7 +1,8 @@
-import useElementOnSecreen from "../../../../../lib/hooks/useElementOnSecreen";
-import styles from "./../About.module.css";
+import { FC } from 'react';
+import useElementOnSecreen from '../../../../../lib/hooks/useElementOnSecreen';
+import styles from './../About.module.css';
 
-const BelowLine = () => {
+const BelowLine: FC = () => {
   const [isVisible, containerRef] = useElementOnSecreen(0.5);
 
   return (
@@ -11,7 +12,7 @@ const BelowLine = () => {
       height="258"
       ref={containerRef}
       className={`${styles.animateBelowLine} ${
-        isVisible ? styles.animate : ""
+        isVisible ? styles.animate : ''
       }`}
     >
       <g id={styles.BelowLineContainer} transform="translate(-162 -139)">
