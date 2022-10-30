@@ -3,38 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-    * {
-        outline: #16b17030 solid 2px;
-    }
+  * {
+    @apply outline-dashed outline-2 outline-primary/20;
+  }
 
-    html,
-    body {
-        scroll-behavior: smooth;
-    }
+  html,
+  body {
+    @apply text-base-content scroll-smooth bg-base-100;
+  }
 }
 
 ::-webkit-scrollbar {
-    background-color: #2d2d35;
-    width: 0.4rem;
+  background-color: #2d2d35;
+  width: 0.4rem;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #16b170;
+  background-color: #16b170;
 }
 
 .hoverBox:hover {
-    @apply text-dark;
+  @apply text-base-100;
 }
 
 .hoverBox:hover + .popBox {
-    @apply h-full w-full;
-}
-
-@keyframes animateOpacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
+  @apply h-full w-full;
 }

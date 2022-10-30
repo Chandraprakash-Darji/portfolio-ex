@@ -1,7 +1,7 @@
 import { BelowLine, InfoSection, LangaugeAndTools } from ".";
 import useElementOnSecreen from "../../../../lib/hooks/useElementOnSecreen";
-import AnimatedText from "../../../core/AnimatedText";
-import Heading2 from "../../../core/widget/Headings/Heading2";
+import AnimatedText from "../../../widget/AnimatedText";
+import { Heading2 } from "../../../widget/Headings";
 
 const About = () => {
   const [isVisible, containerRef] = useElementOnSecreen();

@@ -1,4 +1,4 @@
-import Heading3 from "../../../../core/widget/Headings/Heading3";
+import Heading3 from "../../../../widget/Headings/Heading3";
 
 const InfoSection = () => {
   return (
@@ -9,7 +9,7 @@ const InfoSection = () => {
         <span className="not-italic"> 👋 </span>
         I'am <span className="text-primary"> Chandra</span>,{" "}
       </Heading3>
-      <p className="relative before:absolute before:-left-8 before:font-sans before:text-lg before:font-normal before:not-italic before:text-mainDark before:content-['<p>']">
+      <p className="relative before:absolute before:-left-8 before:font-sans before:text-lg before:font-normal before:not-italic before:text-base-200 before:content-['<p>']">
         <br /> I am a self-taught Developer and a person who loves to learn new
         things. I have been working on my skills for 1 year now. I started with
         the subject
@@ -25,7 +25,7 @@ const InfoSection = () => {
         Now I have the following skills and desire to learn more. I am looking
         forward to learn about Blockchain, Solidity, and Smart Contracts.
       </p>
-      <p className="relative after:absolute after:-left-10 after:font-sans  after:text-lg after:font-normal after:not-italic after:text-mainDark after:content-['</p>']">
+      <p className="relative after:absolute after:-left-10 after:font-sans  after:text-lg after:font-normal after:not-italic after:text-base-200 after:content-['</p>']">
         Now I am working on{" "}
         <a href="https://github.com/ax-studios/frontend-web">
           <span className="text-primary hover:underline">College CMS</span>

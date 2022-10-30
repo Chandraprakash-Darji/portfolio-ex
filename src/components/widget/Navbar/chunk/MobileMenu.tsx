@@ -7,7 +7,7 @@ const MobileMenu = () => {
     return (
         <>
             <nav
-                className={`fixed left-1/2 z-[70] w-[calc(100%-3rem)] max-w-xs -translate-x-1/2 rounded-lg border border-white/30 bg-dark/70 p-3 py-5 backdrop-blur transition-all duration-300 sm:hidden ${
+                className={`fixed left-1/2 z-[70] w-[calc(100%-3rem)] max-w-xs -translate-x-1/2 rounded-lg border border-white/30 bg-base-100/70 p-3 py-5 backdrop-blur transition-all duration-300 sm:hidden ${
                     openState ? ' top-44' : '-top-[30rem]'
                 }`}
             >
@@ -23,7 +23,7 @@ const MobileMenu = () => {
                 </ul>
             </nav>
             <div
-                className={`absolute z-[60] bg-gradient-to-br from-primary/10 to-dark/10 backdrop-blur transition-all duration-200 sm:hidden w-screen h-screen origin-top ${
+                className={`absolute z-[60] bg-gradient-to-br from-primary/10 to-base-100/10 backdrop-blur transition-all duration-200 sm:hidden w-screen h-screen origin-top ${
                     openState
                         ? 'visible scale-100 opacity-100'
                         : 'invisible scale-0 opacity-0'

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { useState } from "react";
 import {
-  AltIcon,
-  GithubIcon,
-  GlobeIcon,
-  LeftArrowIcon,
+    AltIcon,
+    GithubIcon,
+    GlobeIcon,
+    LeftArrowIcon
 } from "../../../../Icons";
 import useElementOnSecreen from "../../../../lib/hooks/useElementOnSecreen";
-import AnimatedText from "../../../core/AnimatedText";
-import Heading2 from "../../../core/widget/Headings/Heading2";
+import AnimatedText from "../../../widget/AnimatedText";
+import Heading2 from "../../../widget/Headings/Heading2";
 import styles from "./Project.module.css";
 const projectList = ["filpire"];
 
@@ -39,7 +39,7 @@ const Projects = () => {
               className="rounded-full object-cover object-left-top"
               layout="fill"
             />
-            <figure className="absolute left-1/2 bottom-16 -translate-x-1/2 rounded-2xl bg-dark px-2 py-1 transition-all duration-300 ">
+            <figure className="absolute left-1/2 bottom-16 -translate-x-1/2 rounded-2xl bg-base-100 px-2 py-1 transition-all duration-300 ">
               <div className="relative h-20 w-56">
                 <Image
                   src={"/assets/images/filmpire-logo.png"}
@@ -79,7 +79,7 @@ const Projects = () => {
             {["mui", "redux", "react", "typescript"].map((tool) => (
               <span
                 key={tool}
-                className="rounded-lg border border-primary p-2 px-3 font-bold capitalize hover:bg-primary hover:text-dark"
+                className="rounded-lg border border-primary p-2 px-3 font-bold capitalize hover:bg-primary hover:text-base-100"
               >
                 {tool}
               </span>
@@ -92,7 +92,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="group w-max rounded-xl border border-primary py-3 px-5 capitalize hover:bg-primary lg:rounded-none lg:rounded-l-xl"
             >
-              <span className="flex items-center justify-center gap-3 text-primary group-hover:text-dark">
+              <span className="flex items-center justify-center gap-3 text-primary group-hover:text-base-100">
                 Live
                 <span className="w-6">
                   <GlobeIcon />
@@ -105,7 +105,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="group w-max rounded-xl border border-primary py-3 px-5 capitalize hover:bg-primary lg:rounded-none"
             >
-              <span className="flex items-center justify-center gap-3 text-primary group-hover:text-dark">
+              <span className="flex items-center justify-center gap-3 text-primary group-hover:text-base-100">
                 Project Code
                 <span className="w-6">
                   <GithubIcon />
@@ -117,7 +117,7 @@ const Projects = () => {
               className="group w-max rounded-xl border border-primary py-3 px-5 capitalize hover:bg-primary disabled:cursor-not-allowed  disabled:hover:border-primary disabled:hover:bg-transparent disabled:hover:opacity-50 lg:rounded-none lg:rounded-r-xl"
               disabled
             >
-              <span className="flex items-center justify-center gap-3 text-primary group-hover:text-dark group-disabled:group-hover:text-primary">
+              <span className="flex items-center justify-center gap-3 text-primary group-hover:text-base-100 group-disabled:group-hover:text-primary">
                 Read more
                 <span className="w-6">
                   <AltIcon />
@@ -139,7 +139,7 @@ const Projects = () => {
               }
             })
           }
-          className="hidden w-max rounded-full border-2 border-main p-5 transition-all duration-300 hover:scale-125 active:scale-110 disabled:opacity-50 disabled:hover:scale-100 md:p-10 lg:block"
+          className="hidden w-max rounded-full border-2 border-base-content p-5 transition-all duration-300 hover:scale-125 active:scale-110 disabled:opacity-50 disabled:hover:scale-100 md:p-10 lg:block"
         >
           <span className="text-primary">
             <span className="inline-block w-12">
@@ -159,7 +159,7 @@ const Projects = () => {
 
         <button
           disabled
-          className="hidden w-max rounded-full border-2 border-main p-5 transition-all duration-300 hover:scale-125 active:scale-110 disabled:opacity-50 disabled:hover:scale-100 md:p-10 lg:block"
+          className="hidden w-max rounded-full border-2 border-base-content p-5 transition-all duration-300 hover:scale-125 active:scale-110 disabled:opacity-50 disabled:hover:scale-100 md:p-10 lg:block"
           onClick={() => setCurrentproject((p) => (p + 1) % projectList.length)}
         >
           <span className="text-primary">

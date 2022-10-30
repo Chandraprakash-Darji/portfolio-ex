@@ -5,10 +5,10 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                dark: "#111119",
+                'base-100': "#111119",
                 primary: "#00ff94",
-                main: "#ffffff",
-                mainDark: "#606061",
+                'base-content': "#ffffff",
+                'base-200': "#606061",
             },
             fontFamily: {
                 Roboto: ["Roboto", ...defaultTheme.fontFamily.sans],

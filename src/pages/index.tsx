@@ -1,11 +1,11 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Navbar from "../components/core/widget/Navbar";
 import { About, Contact, Hero, Projects } from "../components/pages/Home";
+import Navbar from "../components/widget/Navbar";
 
 const Landing: NextPage = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-dark font-mono text-main">
+    <div className="min-h-screen overflow-x-hidden font-mono">
       <Head>
         <title>Portfolio - Chandraprakash Darji</title>
       </Head>

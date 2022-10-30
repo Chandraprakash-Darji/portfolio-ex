@@ -1,4 +1,4 @@
-import AnimatedText from "../../../../core/AnimatedText";
+import AnimatedText from "../../../../widget/AnimatedText";
 import styles from "../Home.module.css";
 
 const DownloadCV = () => {

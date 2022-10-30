@@ -1,6 +1,6 @@
 import { ToolIcon } from "..";
 import AppIcons from "../../../../../lib/data/AppIcons";
-import Heading3 from "../../../../core/widget/Headings/Heading3";
+import Heading3 from "../../../../widget/Headings/Heading3";
 
 const LangaugeAndTools = () => {
   return (

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { OpenContext } from '..';
-import AnimatedText from '../../../AnimatedText';
+import AnimatedText from '../../AnimatedText';
 
 type navItemProps = {
     href: string;
