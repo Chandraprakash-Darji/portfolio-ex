@@ -26,7 +26,7 @@ const Hero: FC = () => {
         />
         <h1 className="relative py-10 pl-10 font-RobotoCondensed text-4xl font-bold italic leading-[1.1] tracking-wide magic-spaceInUp before:absolute before:left-5 before:top-3 before:font-sans before:text-base before:font-normal before:not-italic before:text-base-200 before:content-['<h1>'] after:absolute after:bottom-3 after:left-5 after:font-sans after:text-base  after:font-normal after:not-italic after:text-base-200 after:content-['</h1>'] md:text-5xl lg:pl-20 lg:text-7xl lg:before:left-10 lg:before:top-0 lg:before:text-3xl lg:after:bottom-0 lg:after:left-10 lg:after:text-3xl xl:text-[6rem]">
           Chandra
-          <span className="hidden md:inline">
+          <span className="hidden outline-none md:inline">
             <br />
           </span>
           Prakash Darji

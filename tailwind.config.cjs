@@ -4,6 +4,10 @@ module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial':
+          'radial-gradient(50% 50% at 50% 50%,var(--tw-gradient-stops))',
+      },
       colors: {
         'base-100': '#111119',
         primary: '#fa8c01',

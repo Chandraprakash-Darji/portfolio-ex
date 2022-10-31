@@ -34,12 +34,10 @@ const Cursor: FC = () => {
       ref={cursorRef}
       className={`${
         styles.cursor
-      } pointer-events-none fixed top-96 left-1/2 z-[9999] hidden aspect-square h-24 -translate-x-1/2 -translate-y-1/2 mix-blend-difference outline-none lg:block  ${
+      } pointer-events-none fixed top-96 left-1/2 z-[9999] hidden aspect-square h-24 -translate-x-1/2 -translate-y-1/2 bg-gradient-radial from-base-100 to-primary mix-blend-difference outline-none lg:block ${
         cursorShow ? '' : 'transition-all duration-300'
       }`}
       style={{
-        backgroundImage:
-          'radial-gradient(50% 50% at 50% 50%,rgba(169,255,28,0) 0,#fa8c01 100%)',
         top: positon.top,
         left: positon.left,
       }}
