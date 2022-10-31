@@ -27,9 +27,7 @@
 }
 
 .curveLine path {
-  fill: transparent;
-  stroke-width: 5;
-  stroke: #00ff94;
+  @apply stroke-primary stroke-[5];
   stroke-dasharray: 1400;
   stroke-dashoffset: -1400;
 }

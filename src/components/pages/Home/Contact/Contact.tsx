@@ -10,7 +10,7 @@ const Contact: FC = () => {
     <div
       ref={containerRef}
       id="contact"
-      className={`container mx-auto mt-10 min-h-[30rem] transition-all  duration-500 ease-linear lg:mt-[21rem] ${
+      className={`container mx-auto mt-10 min-h-[30rem] transition-transform duration-500 ease-linear lg:mt-[21rem] ${
         isVisible ? 'pt-0' : 'pt-36 opacity-0'
       }`}
     >
@@ -20,7 +20,7 @@ const Contact: FC = () => {
         </Heading2>
       </div>
       <SocialWrapper />
-      <div className="flex justify-center gap-2 text-xl">
+      <div className="flex items-center justify-center gap-2 text-xl">
         <span>Sponser me on Github</span>
         <iframe
           src="https://github.com/sponsors/Chandraprakash-Darji/button"

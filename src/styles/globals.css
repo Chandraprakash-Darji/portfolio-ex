@@ -19,7 +19,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #16b170;
+  @apply bg-primary;
 }
 
 .hoverBox:hover {
@@ -29,4 +29,3 @@
 .hoverBox:hover + .popBox {
   @apply h-full w-full;
 }
-

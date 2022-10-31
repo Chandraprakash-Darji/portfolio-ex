@@ -15,9 +15,8 @@ const CurveSvg: FC = () => {
             d="M5475.719,162.724h-86.277s-1.547,135.657,0,198.591,52.367,167.9,178.905,168.835,396.488-1.733,497.264,0,173.82,84.186,175.553,163.173,0,100.033,0,100.033"
             transform="translate(-5289)"
             fill="none"
-            stroke="#00ff94"
             strokeWidth="5"
-            className="outline-none"
+            className="stroke-primary outline-none"
           />
           <g id="curveSvgPath-Cirlce--1" transform="translate(0 66)">
             <circle
@@ -25,7 +24,7 @@ const CurveSvg: FC = () => {
               cy="23.5"
               r="23.5"
               transform="translate(162 73)"
-              fill="rgba(0,255,148,0.57)"
+              className="fill-primary/50"
             />
             <circle
               cx="11"
@@ -41,7 +40,7 @@ const CurveSvg: FC = () => {
               cy="23.5"
               r="23.5"
               transform="translate(162 73)"
-              fill="rgba(0,255,148,0.57)"
+              className="fill-primary/50"
             />
             <circle
               cx="11"

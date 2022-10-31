@@ -21,11 +21,11 @@ const BelowLine: FC = () => {
           y2="210.668"
           transform="translate(185.5 164.5)"
           fill="none"
-          stroke="#00ff94"
+          className="strok-primary"
           strokeWidth="5"
         />
         <g id="BelowLine_Circle-1" transform="translate(162 139)">
-          <circle cx="23.5" cy="23.5" r="23.5" fill="rgba(0,255,148,0.57)" />
+          <circle cx="23.5" cy="23.5" r="23.5" className="fill-primary/50" />
           <circle
             cx="11"
             cy="11"
@@ -40,7 +40,7 @@ const BelowLine: FC = () => {
             cy="23.5"
             r="23.5"
             transform="translate(0 0.332)"
-            fill="rgba(0,255,148,0.57)"
+            className="fill-primary/50"
           />
           <circle
             cx="11"

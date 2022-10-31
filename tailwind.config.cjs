@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         'base-100': '#111119',
-        primary: '#00ff94',
+        primary: '#fa8c01',
         'base-content': '#ffffff',
         'base-200': '#606061',
       },

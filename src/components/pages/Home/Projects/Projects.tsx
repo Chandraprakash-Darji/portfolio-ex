@@ -19,7 +19,7 @@ const Projects: FC = () => {
     <section
       id="myportfolio"
       ref={containerRef}
-      className={`container relative mx-auto mt-10 transition-all duration-500 ease-linear lg:mt-52 ${
+      className={`container relative mx-auto mt-10 transition-transform duration-500 ease-linear lg:mt-52 ${
         isVisible ? 'translate-y-0' : 'translate-y-36 opacity-0'
       }`}
     >
@@ -193,7 +193,7 @@ const ProjectCurve: FC = () => {
     >
       <g id="ProjectCurve" transform="translate(-387 -45)">
         <path
-          className="outline-none"
+          className="stroke-primary outline-none"
           d="M5659.318,68.408s2.4,98,117.736,96.807,522.587-2.609,522.587-2.609-.062,37.947-1.331,125.1-88.96,138.779-165.337,140.9-107.565-2.39-315.406,0c-100.709-1.2-157.156,44.808-158.482,114.679-.512,92.854,0,94.693,0,94.693"
           transform="translate(-5247.554 -0.356)"
         />
@@ -203,7 +203,7 @@ const ProjectCurve: FC = () => {
             cy="23.5"
             r="23.5"
             transform="translate(162 73)"
-            fill="rgba(0,255,148,0.57)"
+            className="fill-primary/50"
           />
           <circle
             cx="11"
@@ -219,7 +219,7 @@ const ProjectCurve: FC = () => {
             cy="23.5"
             r="23.5"
             transform="translate(162 73)"
-            fill="rgba(0,255,148,0.57)"
+            className="fill-primary/50"
           />
           <circle
             cx="11"
