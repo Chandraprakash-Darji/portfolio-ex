@@ -48,6 +48,7 @@ const Links: NextPage = () => {
                   target={'_blank'}
                   className="aspect-square w-10 shrink-0 text-base-content hover:text-primary"
                 >
+                  <span className="sr-only">{social.name}</span>
                   {socialIcons[social.name.toLowerCase()]}
                 </a>
               </Link>

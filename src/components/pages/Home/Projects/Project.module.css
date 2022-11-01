@@ -23,7 +23,7 @@
 }
 
 .projectCurve path {
-  @apply stroke-primary fill-transparent stroke-[5];
+  @apply fill-transparent stroke-primary stroke-[5];
   stroke-dasharray: 1700;
   stroke-dashoffset: 1700;
 }

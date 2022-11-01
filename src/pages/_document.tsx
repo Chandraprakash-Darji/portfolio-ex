@@ -6,7 +6,7 @@ import { GA_TRACKING_ID } from '../lib/helper/gtag';
 class MyDocument extends Document {
   render(): ReactElement {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
 

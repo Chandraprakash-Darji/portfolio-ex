@@ -66,7 +66,7 @@ const Projects: FC = () => {
             />
           </figure>
         </div>
-        <div className="w-full py-7 px-3 lg:px-0">
+        <div className="relative block w-full py-7 pr-3 pl-10 before:absolute before:left-0 before:-translate-y-full before:text-base before:font-normal before:not-italic before:text-base-200 before:content-['<h3>'] after:absolute after:bottom-0 after:left-0 after:text-base after:font-normal after:not-italic after:text-base-200 after:content-['</h3>'] md:text-4xl md:before:text-lg md:after:text-lg lg:pr-0">
           <span className="block text-center font-RobotoCondensed text-5xl font-bold tracking-wider text-primary lg:text-left lg:text-7xl">
             Filmpire
           </span>
@@ -75,7 +75,7 @@ const Projects: FC = () => {
             watchlist and Favorite's. You get the recommendation for the similar
             movies and you have option to get movies by genre with the TMDB API.
           </p>
-          <span className="mt-5 mb-10 flex gap-4 text-primary lg:text-xl">
+          <span className="mt-5 mb-10 flex flex-wrap gap-4 text-sm text-primary lg:text-xl">
             {['mui', 'redux', 'react', 'typescript'].map((tool) => (
               <span
                 key={tool}
@@ -85,7 +85,7 @@ const Projects: FC = () => {
               </span>
             ))}
           </span>
-          <div className="flex flex-wrap gap-4 gap-x-2 lg:gap-0 lg:text-xl">
+          <div className="flex flex-wrap gap-4 gap-x-2 text-sm lg:gap-0 lg:text-xl">
             <a
               href="https://filmpirecp.vercel.app/"
               target="_blank"
@@ -94,7 +94,7 @@ const Projects: FC = () => {
             >
               <span className="flex items-center justify-center gap-3 text-primary group-hover:text-base-100">
                 Live
-                <span className="w-6">
+                <span className="w-5 lg:w-6">
                   <GlobeIcon />
                 </span>
               </span>
@@ -144,6 +144,7 @@ const Projects: FC = () => {
           <span className="text-primary">
             <span className="inline-block w-12">
               <LeftArrowIcon />
+              <span className="sr-only">Previous Project</span>
             </span>
           </span>
         </button>
@@ -164,6 +165,7 @@ const Projects: FC = () => {
         >
           <span className="text-primary">
             <span className="inline-block h-full w-12 rotate-180">
+              <span className="sr-only">Next Project</span>
               <LeftArrowIcon />
             </span>
           </span>
