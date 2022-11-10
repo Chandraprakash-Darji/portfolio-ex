@@ -21,7 +21,7 @@ const Navbar: FC = () => {
     <OpenContext.Provider value={{ openState, setOpenState }}>
       <header className="NavBar select-none overflow-x-hidden md:text-lg">
         <div
-          className="min-w-screen container relative z-50 mx-auto flex items-center justify-between bg-base-100 py-5 px-3 sm:py-8"
+          className="min-w-screen container relative z-50 mx-auto flex items-center justify-between py-5 px-3 sm:py-8"
           id="navbar"
         >
           <SmNav from={0} to={2} isLeft />

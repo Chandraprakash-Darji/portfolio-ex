@@ -9,7 +9,7 @@ module.exports = {
           'radial-gradient(50% 50% at 50% 50%,var(--tw-gradient-stops))',
       },
       colors: {
-        'base-100': '#111119',
+        'base-100': '#010b28',
         primary: '#00ff94',
         'base-content': '#ffffff',
         'base-200': '#606061',
