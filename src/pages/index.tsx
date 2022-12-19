@@ -4,7 +4,7 @@ import Seo from '@/components/Seo';
 export default function HomePage() {
   return (
     <>
-      <Seo templateTitle='Home' />
+      <Seo />
 
       <section className='layout flex h-full items-center justify-center gap-10'>
         <div className='flex-1'>
