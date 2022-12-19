@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.6.1",
+    "@types/gtag.js": "^0.0.12",
     "clsx": "^1.2.1",
     "next": "^13.0.5",
     "react": "^18.2.0",
