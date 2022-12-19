@@ -1,25 +1,23 @@
 import { ReactElement } from 'react';
+
+import { SocialNameType } from '@/lib/types';
+
 import {
   GithubIcon,
-  Instagramicon,
+  InstagramIcon,
   LinkedInIcon,
   MailIcon,
   TwitterIcon,
-} from '../../Icons';
+} from '@/Icons';
 
-interface IconsType {
-  [key: string]: ReactElement;
-}
-
-const useSocialIcons = (): IconsType => {
-  const Icons: IconsType = {
-    instagram: <Instagramicon />,
+const useSocialIcons = (): Record<SocialNameType, ReactElement> => {
+  return {
+    instagram: <InstagramIcon />,
     github: <GithubIcon />,
     linkedin: <LinkedInIcon />,
     mail: <MailIcon />,
     twitter: <TwitterIcon />,
   };
-  return Icons;
 };
 
 export default useSocialIcons;
