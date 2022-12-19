@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  * {
-    @apply outline-dashed outline-2 outline-primary/20;
+:root {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* #region  /**=========== Colors =========== */
+  --tw-color-content: 96, 123, 105; /* #607B96 */
+  --tw-color-divider: 30, 45, 61; /* #1E2D3D */
+  --tw-color-base-100: 1, 22, 39; /* #011627 */
+  --tw-color-base-200: 1, 8, 14; /* #01080E */
+  --tw-color-orange: 254, 165, 95; /* #fea55f */
+  --tw-color-purple: 77, 91, 205; /* #4d5bd5 */
+  --tw-color-green: 67, 217, 173; /* #43d9ad */
+  --tw-color-white: 256, 256, 256; /* #ffffff */
+  /* #endregion  /**======== Colors =========== */
+}
+@layer {
+  ::-webkit-scrollbar {
+    @apply h-[6px] w-[6px] bg-base-100;
   }
 
-  html,
-  body {
-    @apply scroll-smooth bg-base-100 text-base-content;
-    background-image: radial-gradient(
-      circle at 50% 50%,
-      #444cf730 0,
-      #444cf730 2px,
-      transparent 2px
-    );
-    background-position: 20px 0, 20px 0, 0 0, 0 0;
-    /* background-position: 0 0; */
-    background-size: 20px 20px;
-    background-repeat: repeat;
+  ::-webkit-scrollbar-thumb {
+    @apply bg-content/30;
   }
-}
 
-::-webkit-scrollbar {
-  background-color: #2d2d35;
-  width: 0.4rem;
-}
+  .cursor-newtab {
+    cursor: url('/images/new-tab.png') 10 10, pointer;
+  }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-primary;
-}
+  .layout {
+    max-width: 68rem;
+    @apply mx-auto w-11/12;
+  }
 
-.hoverBox:hover {
-  @apply text-base-100;
-}
+  /* #region  /**=========== Typography =========== */
+  h1,
+  .h1 {
+    @apply font-primary text-3xl text-content md:text-5xl lg:text-6xl;
+  }
 
-.hoverBox:hover + .popBox {
-  @apply h-full w-full;
-  /* background-color: #010b28; */
+  h2,
+  .h2 {
+    @apply font-primary text-xl text-content md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply font-primary text-lg text-content md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply font-primary text-base text-content md:text-lg;
+  }
+
+  body,
+  .p {
+    @apply font-primary text-sm text-content md:text-base;
+  }
+  /* #endregion  /**======== Typography =========== */
 }
