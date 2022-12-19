@@ -24,7 +24,7 @@ export default function Seo(props: SeoProps) {
     ...props,
   };
   meta['title'] = props.templateTitle
-    ? `${props.templateTitle} | ${meta.siteName}`
+    ? `${props.templateTitle} ${meta.siteName}`
     : meta.title;
 
   return (
