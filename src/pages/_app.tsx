@@ -1,12 +1,14 @@
 import { AppProps } from 'next/app';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { ReactNode, useEffect } from 'react';
-import Cursor from '../components/pages/Home/Cursor';
-import '../styles/globals.css';
-import * as gtag from './../lib/helper/gtag';
+import { useEffect } from 'react';
 
-function MyApp({ Component, pageProps }: AppProps): ReactNode {
+import '@/styles/globals.css';
+
+import * as gtag from '@/lib/helper/gtag';
+
+import Layout from '@/components/layout/Layout';
+
+function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
@@ -18,14 +20,11 @@ function MyApp({ Component, pageProps }: AppProps): ReactNode {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
+
   return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+    <Layout>
       <Component {...pageProps} />
-      <Cursor />
-    </>
+    </Layout>
   );
 }
 
