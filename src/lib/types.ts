@@ -7,13 +7,14 @@ export type SocialNameType =
 
 // used for the icon to use
 export type FileExtType = 'folder' | 'markdown';
+export type Icon = null | FileExtType;
 // Color that going to used for folder
 export type FolderColorType = 'orange' | 'green' | 'purple';
 
 // Base type for file and folder
 export type BaseFileType = {
   name: string;
-  icon: FileExtType;
+  icon: Icon;
 };
 
 // File type
