@@ -2,22 +2,14 @@ import { Disclosure, Transition } from '@headlessui/react';
 
 import clsxm from '@/lib/clsxm';
 import useMenuIcons from '@/lib/hooks/useMenuIcons';
-import { FileExtType, FolderColorType } from '@/lib/types';
+import { FileType, FolderColorType, FolderType, menuType } from '@/lib/types';
 
 import SidebarMenuFileLink from '@/components/links/SidebarMenuFileLink';
 
 import { ArrowIcon, FilledArrowIcon } from '@/Icons/sidebar/menu';
 
-type menuType = {
-  name: string;
-  icon: FileExtType;
-  href?: string;
-  color?: FolderColorType;
-  children: Array<menuType>;
-};
-
 type SidebarMenuOptionProps = {
-  menu: menuType;
+  menu: menuType | FileType | FolderType;
 };
 
 // get color class
@@ -38,7 +30,7 @@ export default function SidebarMenuOption({ menu }: SidebarMenuOptionProps) {
   const menuIcon = useMenuIcons();
 
   // Render File if object contains href
-  if (menu.href) {
+  if (menu.href != null && menu.icon != null) {
     return (
       <SidebarMenuFileLink href={menu.href} icon={menu.icon}>
         {menu.name}
@@ -57,9 +49,10 @@ export default function SidebarMenuOption({ menu }: SidebarMenuOptionProps) {
           {menu.name}
         </div>
         {/* Renders all File */}
-        {menu.children.map((child, index) => {
-          return <SidebarMenuOption menu={child} key={index} />;
-        })}
+        {menu.children != null &&
+          menu.children.map((child, index) => {
+            return <SidebarMenuOption menu={child} key={index} />;
+          })}
       </>
     );
 
@@ -80,7 +73,7 @@ export default function SidebarMenuOption({ menu }: SidebarMenuOptionProps) {
             </div>
             {/* Folder Icons */}
             <div className={getColorClass(menu.color)}>
-              {menuIcon[menu.icon]}
+              {menu.icon && menuIcon[menu.icon]}
             </div>
             {/* Folder name */}
             {menu.name}
@@ -89,9 +82,10 @@ export default function SidebarMenuOption({ menu }: SidebarMenuOptionProps) {
           {/* Files Under the Folder */}
           <Transition className='origin-top' show={open} {...transition}>
             <Disclosure.Panel className='pl-4'>
-              {menu.children.map((child, index) => {
-                return <SidebarMenuOption menu={child} key={index} />;
-              })}
+              {menu.children != null &&
+                menu.children.map((child, index) => {
+                  return <SidebarMenuOption menu={child} key={index} />;
+                })}
             </Disclosure.Panel>
           </Transition>
         </>
