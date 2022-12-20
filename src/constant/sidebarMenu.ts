@@ -26,13 +26,11 @@ const sidebarMenu: { personalInfo: menuType } = {
         name: 'interset.md',
         icon: 'markdown',
         href: '/personal-info/?file=interset',
-        children: [],
       },
       {
         name: 'education.md',
         icon: 'markdown',
         href: '/personal-info/?file=education',
-        children: [],
       },
     ],
   },
