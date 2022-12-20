@@ -8,7 +8,7 @@ import {
   LinkedInIcon,
   MailIcon,
   TwitterIcon,
-} from '@/Icons';
+} from '@/Icons/socials';
 
 const useSocialIcons = (): Record<SocialNameType, ReactElement> => {
   return {
