@@ -1,8 +1,4 @@
-import { useRouter } from 'next/router';
-
-import clsxm from '@/lib/clsxm';
-
-import UnstyledLink from '@/components/links/UnstyledLink';
+import HeaderLink from '@/components/links/HeaderLink';
 
 const links = [
   { href: '/', label: '_home' },
@@ -11,7 +7,6 @@ const links = [
 ];
 
 const Header = () => {
-  const router = useRouter();
   return (
     <header className='relative z-50 flex h-14 border-b border-divider text-lg'>
       <div className='flex h-full w-full max-w-sm items-center px-4'>
@@ -19,24 +14,12 @@ const Header = () => {
       </div>
       <nav className='flex h-full flex-1'>
         {links.map((link) => (
-          <UnstyledLink
-            href={link.href}
-            className={clsxm(
-              'flex h-full items-center px-8',
-              'border-l border-divider',
-              'border-b-2 border-b-transparent',
-              'last:border-r',
-              link.href === router.asPath && 'border-b-orange'
-            )}
-            key={link.label}
-          >
+          <HeaderLink href={link.href} key={link.label}>
             {link.label}
-          </UnstyledLink>
+          </HeaderLink>
         ))}
       </nav>
-      <div className='flex h-full items-center border-l border-divider px-8'>
-        _contact-me
-      </div>
+      <HeaderLink href='/contact'>_contact-me</HeaderLink>
     </header>
   );
 };
