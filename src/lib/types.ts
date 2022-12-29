@@ -37,3 +37,10 @@ export type menuType = BaseFileType & {
   color?: never;
   children: Array<FileType | FolderType>;
 };
+
+// Presonal Info files
+export type personalInfoFile =
+  | 'basic.md'
+  | 'contact.md'
+  | 'interset.md'
+  | 'education.md';

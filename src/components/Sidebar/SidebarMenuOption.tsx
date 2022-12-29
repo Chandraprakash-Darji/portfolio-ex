@@ -42,7 +42,7 @@ export default function SidebarMenuOption({ menu }: SidebarMenuOptionProps) {
   if (!menu.icon)
     return (
       <>
-        <div className='flex w-full items-center gap-2 border-b border-divider px-3 py-2 text-white'>
+        <div className='flex h-10 w-full items-center gap-2 border-b border-divider px-3 text-white'>
           <div className='w-max shrink-0 -rotate-90'>
             <FilledArrowIcon />
           </div>

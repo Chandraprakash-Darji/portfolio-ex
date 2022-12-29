@@ -13,24 +13,24 @@ const sidebarMenu: { personalInfo: menuType } = {
           {
             name: 'basic.md',
             icon: 'markdown',
-            href: '/personal-info/?file=basic',
+            href: '/personal-info/?file=basic.md',
           },
           {
             name: 'contact.md',
             icon: 'markdown',
-            href: '/personal-info/?file=contact',
+            href: '/personal-info/?file=contact.md',
           },
         ],
       },
       {
         name: 'interset.md',
         icon: 'markdown',
-        href: '/personal-info/?file=interset',
+        href: '/personal-info/?file=interset.md',
       },
       {
         name: 'education.md',
         icon: 'markdown',
-        href: '/personal-info/?file=education',
+        href: '/personal-info/?file=education.md',
       },
     ],
   },
