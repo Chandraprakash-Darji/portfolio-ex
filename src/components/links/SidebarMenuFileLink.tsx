@@ -9,7 +9,7 @@ import UnstyledLink, {
 } from '@/components/links/UnstyledLink';
 
 type SidebarMenuFileLinkProps = UnstyledLinkProps & {
-  icon: FileExtType;
+  icon?: FileExtType;
   children: string;
 };
 
@@ -23,7 +23,7 @@ export default function SidebarMenuFileLink({
   const { query } = useRouter();
   return (
     <UnstyledLink
-      href={`/about${href}`}
+      href={href}
       className={clsxm(
         'flex w-full items-center gap-2 py-1 pl-5',
         'hover:bg-divider/30 focus:outline-none focus-visible:bg-divider/30',

@@ -5,6 +5,19 @@ export type SocialNameType =
   | 'instagram'
   | 'linkedin';
 
+export type FrameworkType =
+  | 'react'
+  | 'next'
+  | 'flutter'
+  | 'vite'
+  | 'tailwind'
+  | 'typescript'
+  | 'css'
+  | 'scss'
+  | 'html'
+  | 'javascript'
+  | 'firebase';
+
 // used for the icon to use
 export type FileExtType = 'folder' | 'markdown';
 export type IconType = null | FileExtType;
