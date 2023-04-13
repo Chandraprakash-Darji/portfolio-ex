@@ -8,7 +8,7 @@ const links = [
 
 const Header = () => {
   return (
-    <header className='relative z-50 flex h-14 border-b border-divider text-lg'>
+    <header className='relative z-50 flex h-14 shrink-0 border-b border-divider text-lg'>
       <div className='flex h-full w-full max-w-sm items-center px-4'>
         chandraprakash.codes
       </div>

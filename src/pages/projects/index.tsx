@@ -1,9 +1,12 @@
 import * as React from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 import clsxm from '@/lib/clsxm';
 import useFrameWorkIcons from '@/lib/hooks/useFrameWorkIcons';
 import { FrameworkType } from '@/lib/types';
 
+import UnstyledLink from '@/components/links/UnstyledLink';
+import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 import Sidebar from '@/components/Sidebar';
 
@@ -20,7 +23,7 @@ export default function ProjectsPage() {
     <>
       <Seo templateTitle='Projects of' />
 
-      <section className='flex h-full w-full'>
+      <section className='flex w-full'>
         <Sidebar className='flex-col'>
           <div className='flex h-10 w-full items-center gap-2 border-b border-divider px-3 text-white'>
             <div className='w-max shrink-0 -rotate-90'>
@@ -53,8 +56,8 @@ export default function ProjectsPage() {
             );
           })}
         </Sidebar>
-        <div className='flex flex-1 flex-col border-l border-divider'>
-          <div className='h-10 border-b border-divider '>
+        <div className='flex flex-grow flex-col overflow-y-auto overflow-x-hidden border-l border-divider'>
+          <div className='h-10 shrink-0 border-b border-divider '>
             <div className='flex h-full w-max min-w-[12rem] select-none items-center justify-between gap-2 border-r border-divider px-3 italic'>
               {selected.filter((s) => s).length > 0
                 ? framewroks.map((framework, i) =>
@@ -71,16 +74,69 @@ export default function ProjectsPage() {
                     ) : null
                   )
                 : 'All the projects'}
-              <span className='cursor-pointer hover:text-white' onClick={close}>
+              <span
+                className='cursor-pointer hover:text-white'
+                onClick={() => {
+                  setSelected(framewroks.map(() => false));
+                }}
+              >
                 <CloseIcon />
               </span>
             </div>
+          </div>
+          <div className='flex w-full flex-grow flex-wrap gap-10 overflow-y-auto p-10'>
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
           </div>
         </div>
       </section>
     </>
   );
 }
+
+const ProjectCard = () => {
+  return (
+    <article className='w-full max-w-xs'>
+      <div>
+        <span className='font-bold text-purple'>Project 1</span>{' '}
+        <span>&#47;&#47; Percive</span>
+      </div>
+      <div className='mt-4 overflow-hidden rounded-lg border-2 border-divider'>
+        <NextImage
+          className='relative aspect-[6/3] w-full border-b-2 border-divider'
+          fill
+          src='/images/hero/backblur.svg'
+          alt='snake'
+        />
+        <div className='flex flex-col gap-3 p-5'>
+          <p>
+            This is a project that I made to learn about the basics of react and
+            next.js. It is a snake game that you can play with your friends.
+          </p>
+          <div className='mt-1 flex gap-2'>
+            <UnstyledLink
+              href='/projects/:id'
+              className='max-w-max rounded-xl bg-base-200 px-6 py-2 text-white'
+            >
+              view-prjects
+            </UnstyledLink>
+            <UnstyledLink
+              href='/projects/:id'
+              className='max-w-max rounded-xl bg-base-200 px-6 py-2 text-white'
+            >
+              <FaGithub />
+            </UnstyledLink>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+};
 
 type frameworkTypeListType = {
   name: string;
