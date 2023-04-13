@@ -8,8 +8,8 @@ const linkTree = [
     href: '/portfolio.pdf',
   },
   {
-    name: 'Contribute to Ax Studios',
-    href: 'https://github.com/ax-studios',
+    name: 'Contribute to Vibey',
+    href: 'https://github.com/UniKonf/vibey',
   },
 ];
 export default linkTree;
