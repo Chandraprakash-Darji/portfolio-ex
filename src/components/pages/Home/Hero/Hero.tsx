@@ -15,10 +15,9 @@ const Hero: FC = () => {
   return (
     <section
       id="hero"
-      className="container relative mx-auto flex select-none flex-col pt-8 pb-20 sm:text-xl md:flex-row md:justify-between md:pt-20 lg:gap-10 xl:pt-24 xl:pb-32 2xl:pt-28
-            "
+      className="container relative mx-auto flex select-none flex-col pt-8 pb-20 sm:text-xl md:flex-row md:justify-between md:pt-20 lg:gap-10 xl:pt-24 xl:pb-32 2xl:pt-28"
     >
-      <div className="flex flex-col gap-3 px-3 md:gap-5 lg:gap-10">
+      <div className="flex flex-col gap-3 pl-3 md:gap-5 lg:gap-10">
         <AnimatedText
           className="text-primary before:text-base-200 before:content-['<p>_'] after:text-base-200 after:content-['_</p>'] md:text-xl lg:text-2xl xl:text-3xl "
           text="I am"
