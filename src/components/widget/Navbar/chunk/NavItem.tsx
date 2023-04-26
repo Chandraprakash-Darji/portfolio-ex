@@ -11,7 +11,7 @@ const NavItem: FC<navItemProps> = ({ href, isLeft, text }) => {
   const { setOpenState } = useContext(OpenContext);
   return (
     <li
-      className={`relative w-full  ${isLeft ? '' : 'text-right'}`}
+      className={`relative ${isLeft ? '' : 'text-right'}`}
       onClick={() => setOpenState(false)}
     >
       <AnimatedText

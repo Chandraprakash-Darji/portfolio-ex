@@ -20,6 +20,7 @@
     /* background-position: 0 0; */
     background-size: 20px 20px;
     background-repeat: repeat;
+    scroll-padding-top: 128px;
   }
 }
 

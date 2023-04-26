@@ -1,5 +1,5 @@
 import { createContext, FC, useEffect, useState } from 'react';
-import { MobileMenu, OpenMenuBtn, SmNav } from '.';
+import { menuOptions, MobileMenu, NavItem, OpenMenuBtn } from '.';
 
 interface OpenContextProps {
   openState: boolean;
@@ -19,17 +19,33 @@ const Navbar: FC = () => {
 
   return (
     <OpenContext.Provider value={{ openState, setOpenState }}>
-      <header className="NavBar select-none overflow-x-hidden md:text-lg">
+      <header
+        className="fixed top-0 left-0 z-[9995]  w-screen select-none backdrop-blur md:text-lg"
+        style={{
+          backgroundImage: `radial-gradient(
+          rgba(0, 0, 0, 0) 1px,
+          #010b28 1px
+        )`,
+          backgroundSize: '4px 4px',
+        }}
+      >
         <div
-          className="min-w-screen container relative z-50 mx-auto flex items-center justify-between py-5 px-3 sm:py-8"
+          className="layout relative z-50 mx-auto flex h-[95px] items-center justify-between px-3 sm:h-[127px]"
           id="navbar"
         >
-          <SmNav from={0} to={2} isLeft />
-          <div className="relative flex items-center justify-center px-3 font-RobotoCondensed text-[3rem] font-bold italic before:absolute before:-top-5  before:left-1/2 before:-translate-x-1/2 before:font-sans before:text-base before:font-normal before:not-italic before:text-base-200 before:content-['<>'] after:absolute after:-bottom-5 after:left-1/2 after:-translate-x-1/2 after:font-sans after:text-base after:font-normal after:not-italic after:text-base-200 after:content-['</>'] sm:before:-top-10 sm:after:-bottom-10 md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:px-0 md:text-[5rem]">
-            <a href="#home">CP</a>
+          <div className="relative flex items-center justify-center font-RobotoCondensed text-[3rem] font-bold italic outline-none md:text-[5rem]">
+            <a href="#" className="outline-none">
+              CP
+            </a>
           </div>
+          <ul className=" hidden gap-4 sm:flex">
+            {menuOptions.map(({ id, href, text }) => (
+              <NavItem key={id} href={href} text={text} />
+            ))}
+          </ul>
+          {/* <SmNav from={0} to={2} isLeft /> */}
           <OpenMenuBtn />
-          <SmNav from={2} to={4} />
+          {/* <SmNav from={2} to={4} /> */}
         </div>
 
         <MobileMenu />
