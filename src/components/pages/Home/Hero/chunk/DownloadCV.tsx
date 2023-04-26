@@ -24,7 +24,7 @@ const DownloadCV: FC = () => {
 
         <AnimatedText
           as="div"
-          className="hoverBox 0 absolute z-50 flex h-full w-full cursor-pointer items-center justify-center transition-all duration-500 "
+          className="hoverBox 0 absolute z-50 flex h-full w-full cursor-pointer items-center justify-center text-center transition-all duration-500 "
           text={'<Download CV/>'}
         />
         {/* Box that pop */}

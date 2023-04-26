@@ -1,11 +1,13 @@
 import { ReactElement, useCallback, useEffect, useState } from 'react';
-import useInterval from '../../lib/hooks/useInterval';
+import useInterval from '../../../lib/hooks/useInterval';
+import styles from './index.module.css';
 
 interface AnimatedTextOwnProps<E extends React.ElementType> {
   text: string;
   speed?: number;
   delay?: number;
   as?: E;
+  sudoClassName?: string;
 }
 
 type Props<E extends React.ElementType> = AnimatedTextOwnProps<E> &
@@ -15,8 +17,10 @@ type Props<E extends React.ElementType> = AnimatedTextOwnProps<E> &
 const AnimatedText = <E extends React.ElementType>({
   text,
   speed = 80,
-  delay,
   as,
+  className,
+  style,
+  sudoClassName,
   ...props
 }: Props<E>): ReactElement => {
   const [renderText, setRenderText] = useState('');
@@ -61,13 +65,42 @@ const AnimatedText = <E extends React.ElementType>({
     setTimeout(() => {
       startTyping();
       startChar();
-    }, delay);
-  }, [delay, renderText, text, startChar, startTyping, stopChar, stopTyping]);
+    }, 0);
+  }, [renderText, text, startChar, startTyping, stopChar, stopTyping]);
 
   return (
-    <Component {...props}>
-      {renderText}
-      {randomChar}
+    <Component
+      {...props}
+      className={className + ' ' + styles.stack}
+      style={style}
+    >
+      <span
+        style={{
+          '--index': 1,
+        }}
+        className={sudoClassName}
+      >
+        {renderText}
+        {randomChar}
+      </span>
+      <span
+        style={{
+          '--index': 2,
+        }}
+        className={sudoClassName}
+      >
+        {renderText}
+        {randomChar}
+      </span>
+      <span
+        style={{
+          '--index': 3,
+        }}
+        className={sudoClassName}
+      >
+        {renderText}
+        {randomChar}
+      </span>
     </Component>
   );
 };
