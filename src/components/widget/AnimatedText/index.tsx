@@ -1,6 +1,8 @@
 import { ReactElement, useCallback, useEffect, useState } from 'react';
-import useInterval from '../../../lib/hooks/useInterval';
+
 import styles from './index.module.css';
+
+import useInterval from '../../../lib/hooks/useInterval';
 
 interface AnimatedTextOwnProps<E extends React.ElementType> {
   text: string;
