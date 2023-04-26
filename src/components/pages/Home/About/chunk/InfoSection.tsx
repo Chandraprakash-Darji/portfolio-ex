@@ -3,37 +3,35 @@ import Heading3 from '../../../../widget/Headings/Heading3';
 
 const InfoSection: FC = () => {
   return (
-    <div className=" fony-bold flex flex-1 flex-col gap-6 p-3 pb-10 pl-10 text-lg md:text-xl">
+    <div className="fony-bold flex flex-1 flex-col gap-6 pt-3 pb-10 pl-10 text-lg md:text-xl">
       <Heading3 extra="-left-8">
         {' '}
         Hii
         <span className="not-italic"> 👋 </span>
         I'am <span className="text-primary"> Chandra</span>,{' '}
       </Heading3>
-      <p className="relative before:absolute before:-left-8 before:font-sans before:text-lg before:font-normal before:not-italic before:text-base-200 before:content-['<p>']">
-        <br /> I am a self-taught Developer and a person who loves to learn new
-        things. I have been working on my skills for 1 year now. I started with
-        the subject
-        <span className="text-primary"> Web Technologies</span>, which was one
-        of the most interesting subject for me.
-      </p>
-      <p>
-        While learning the subject I was creating websites, Burger King clone is
-        one of it After that, I moved on to master the HTML5, CSS, JavaScript,
-        NodeJS, and React.
-      </p>
-      <p>
-        Now I have the following skills and desire to learn more. I am looking
-        forward to learn about Blockchain, Solidity, and Smart Contracts.
-      </p>
-      <p className="relative after:absolute after:-left-10 after:font-sans  after:text-lg after:font-normal after:not-italic after:text-base-200 after:content-['</p>']">
-        Now I am working on{' '}
-        <a href="https://github.com/ax-studios/frontend-web">
-          <span className="text-primary hover:underline">College CMS</span>
-        </a>{' '}
-        I would like if you contribute to it.
-        <br />
-      </p>
+      <article className="relative space-y-5 before:block before:-translate-x-8 before:font-mono before:text-lg before:font-normal before:not-italic before:text-base-200 before:content-['<p>'] after:block after:-translate-x-10 after:font-mono after:text-lg after:font-normal after:not-italic after:text-base-200 after:content-['</p>']">
+        <p>
+          A frontend developer with a focus on building beautiful and responsive
+          web applications. My tech stack includes Next.js, React, TailwindCSS,
+          and TypeScript, and I'm always eager to learn and expand my skills.
+        </p>
+        <p>
+          As a freelancer, I specialize in providing stress-free and
+          collaborative development processes to help my clients bring their
+          website ideas to life. Whether it's a simple portfolio website or a
+          complex e-commerce platform, I have the skills and expertise needed to
+          deliver high-quality end products that accurately reflect my clients'
+          vision and meet their unique requirements.
+        </p>
+
+        <p>
+          If you're looking for a reliable and skilled frontend developer to
+          help you build your website, look no further than me. I'm committed to
+          helping my clients achieve their goals and providing exceptional
+          service every step of the way.
+        </p>
+      </article>
     </div>
   );
 };
