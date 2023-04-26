@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply outline-dashed outline-2 outline-primary/20;
+    @apply outline-dashed outline-1 outline-primary/20;
   }
 
   html,
@@ -31,7 +31,9 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-primary;
 }
-
+.layout {
+  @apply mx-auto w-11/12 max-w-[90rem];
+}
 .hoverBox:hover {
   @apply text-base-100;
 }

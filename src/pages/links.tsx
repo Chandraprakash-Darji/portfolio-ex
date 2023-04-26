@@ -15,7 +15,7 @@ const Links: NextPage = () => {
       <Head>
         <title>Chandraprakash Darji - Links</title>
       </Head>
-      <div className="container mx-auto w-full max-w-4xl py-8 text-center md:py-20">
+      <div className="mx-auto w-full max-w-4xl py-8 text-center md:py-20">
         <div className="relative mx-auto aspect-square w-32 overflow-hidden rounded-full outline-primary md:w-52">
           <Image
             src="https://github.com/Chandraprakash-Darji.png"

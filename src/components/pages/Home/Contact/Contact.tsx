@@ -10,7 +10,7 @@ const Contact: FC = () => {
     <div
       ref={containerRef}
       id="contact"
-      className={`container mx-auto mt-10 min-h-[30rem] transition-transform duration-500 ease-linear lg:mt-[21rem] ${
+      className={`mx-auto mt-10 min-h-[30rem] transition-transform duration-500 ease-linear lg:mt-[21rem] ${
         isVisible ? 'pt-0' : 'pt-36 opacity-0'
       }`}
     >

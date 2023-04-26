@@ -12,7 +12,7 @@ const About: FC = () => {
     <section
       id="aboutme"
       ref={ref}
-      className={`container relative mx-auto mt-10 transition-transform duration-500 ease-linear md:mt-36 xl:mt-72 ${
+      className={`relative mx-auto mt-10 transition-transform duration-500 ease-linear md:mt-36 xl:mt-72 ${
         isInView ? 'translate-x-0' : 'translate-y-36 opacity-0'
       }`}
     >

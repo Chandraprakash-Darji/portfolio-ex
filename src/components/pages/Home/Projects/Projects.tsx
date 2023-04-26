@@ -19,7 +19,7 @@ const Projects: FC = () => {
     <section
       id="myportfolio"
       ref={containerRef}
-      className={`container relative mx-auto mt-10 transition-transform duration-500 ease-linear lg:mt-52 ${
+      className={`relative mx-auto mt-10 transition-transform duration-500 ease-linear lg:mt-52 ${
         isVisible ? 'translate-y-0' : 'translate-y-36 opacity-0'
       }`}
     >
