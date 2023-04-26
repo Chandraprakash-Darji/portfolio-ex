@@ -5,8 +5,8 @@ const SocialWrapper: FC = () => {
   return (
     <div className="flex flex-wrap items-center justify-center gap-5 py-16 md:flex-nowrap md:gap-10 md:pb-20 md:pt-48">
       <SocialButton
-        text="LinkedIn"
-        href="https://www.linkedin.com/in/Chandraprakash-Darji/"
+        text="Github"
+        href="http://github.com/Chandraprakash-Darji"
         className={{
           x: 'md:-translate-x-16',
           y: 'md:-translate-y-36',
@@ -14,8 +14,8 @@ const SocialWrapper: FC = () => {
         }}
       />
       <SocialButton
-        text="Github"
-        href="http://github.com/Chandraprakash-Darji"
+        text="LinkedIn"
+        href="https://www.linkedin.com/in/Chandraprakash-Darji/"
         className={{
           x: 'md:-translate-x-12',
           y: 'md:translate-y-16',
@@ -28,7 +28,7 @@ const SocialWrapper: FC = () => {
         className={{
           x: 'md:-translate-x-10',
           y: 'md:-translate-y-36',
-          size: 'w-32 md:w-56',
+          size: 'w-32 md:w-40',
         }}
       />
       <SocialButton
@@ -37,7 +37,7 @@ const SocialWrapper: FC = () => {
         className={{
           x: 'md:-translate-x-20',
           y: 'md:translate-y-20',
-          size: 'w-32 md:w-40',
+          size: 'w-32 md:w-56',
         }}
       />
     </div>
