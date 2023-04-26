@@ -8,6 +8,8 @@ interface AnimatedTextOwnProps<E extends React.ElementType> {
   delay?: number;
   as?: E;
   sudoClassName?: string;
+  setMinWidth?: boolean;
+  minWidthIncreser?: number;
 }
 
 type Props<E extends React.ElementType> = AnimatedTextOwnProps<E> &
@@ -21,6 +23,8 @@ const AnimatedText = <E extends React.ElementType>({
   className,
   style,
   sudoClassName,
+  setMinWidth = true,
+  minWidthIncreser = 0,
   ...props
 }: Props<E>): ReactElement => {
   const [renderText, setRenderText] = useState('');
@@ -77,6 +81,11 @@ const AnimatedText = <E extends React.ElementType>({
       <span
         style={{
           '--index': 1,
+          ...(setMinWidth
+            ? {
+                minWidth: `${text.length + minWidthIncreser}ch`,
+              }
+            : {}),
         }}
         className={sudoClassName}
       >
@@ -86,6 +95,12 @@ const AnimatedText = <E extends React.ElementType>({
       <span
         style={{
           '--index': 2,
+
+          ...(setMinWidth
+            ? {
+                minWidth: `${text.length + minWidthIncreser}ch`,
+              }
+            : {}),
         }}
         className={sudoClassName}
       >
@@ -94,7 +109,11 @@ const AnimatedText = <E extends React.ElementType>({
       </span>
       <span
         style={{
-          '--index': 3,
+          ...(setMinWidth
+            ? {
+                minWidth: `${text.length + minWidthIncreser}ch`,
+              }
+            : {}),
         }}
         className={sudoClassName}
       >

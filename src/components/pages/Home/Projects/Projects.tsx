@@ -25,7 +25,11 @@ const Projects: FC = () => {
     >
       <div className="flex items-center justify-center">
         <Heading2>
-          {isVisible ? <AnimatedText text="My Portfolio" /> : ''}
+          {isVisible ? (
+            <AnimatedText text="My Portfolio" setMinWidth={false} />
+          ) : (
+            ''
+          )}
         </Heading2>
       </div>
       <div className="flex flex-col gap-10 py-10 lg:flex-row lg:py-16">

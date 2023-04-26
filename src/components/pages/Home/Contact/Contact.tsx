@@ -16,7 +16,11 @@ const Contact: FC = () => {
     >
       <div className="flex items-center justify-center">
         <Heading2>
-          {isVisible ? <AnimatedText text="Connect with Me" /> : ''}
+          {isVisible ? (
+            <AnimatedText text="Connect with Me" setMinWidth={false} />
+          ) : (
+            ''
+          )}
         </Heading2>
       </div>
       <SocialWrapper />

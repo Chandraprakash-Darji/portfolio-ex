@@ -36,6 +36,7 @@ const Hero: FC = () => {
           className="text-primary md:text-xl lg:text-2xl xl:text-3xl "
           text={' Frontend Developer // UI Designer '}
           sudoClassName="before:text-base-200 before:content-['<p>'] after:text-base-200 after:content-['</p>']"
+          minWidthIncreser={8}
         />
       </div>
       <DownloadCV />
