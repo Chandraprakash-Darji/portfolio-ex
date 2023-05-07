@@ -11,7 +11,7 @@ import useSocialIcons from '../lib/hooks/useSocialIcons';
 const Links: NextPage = () => {
   const socialIcons = useSocialIcons();
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen"> 
       <Head>
         <title>Chandraprakash Darji - Links</title>
       </Head>
