@@ -43,9 +43,7 @@ const Navbar: FC = () => {
               <NavItem key={id} href={href} text={text} />
             ))}
           </ul>
-          {/* <SmNav from={0} to={2} isLeft /> */}
           <OpenMenuBtn />
-          {/* <SmNav from={2} to={4} /> */}
         </div>
 
         <MobileMenu />

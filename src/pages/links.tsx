@@ -11,7 +11,7 @@ import useSocialIcons from '../lib/hooks/useSocialIcons';
 const Links: NextPage = () => {
   const socialIcons = useSocialIcons();
   return (
-    <div className="min-h-screen"> 
+    <div className="min-h-screen">
       <Head>
         <title>Chandraprakash Darji - Links</title>
       </Head>
@@ -43,14 +43,14 @@ const Links: NextPage = () => {
         <div className="mx-auto flex items-center justify-center gap-5 md:gap-14">
           {socials.map((social) => {
             return (
-              <Link href={social.href} key={social.name}>
-                <a
-                  target={'_blank'}
-                  className="aspect-square w-10 shrink-0 text-base-content hover:text-primary"
-                >
-                  <span className="sr-only">{social.name}</span>
-                  {socialIcons[social.name.toLowerCase()]}
-                </a>
+              <Link
+                href={social.href}
+                key={social.name}
+                target={'_blank'}
+                className="aspect-square w-10 shrink-0 text-base-content hover:text-primary"
+              >
+                <span className="sr-only">{social.name}</span>
+                {socialIcons[social.name.toLowerCase()]}
               </Link>
             );
           })}
