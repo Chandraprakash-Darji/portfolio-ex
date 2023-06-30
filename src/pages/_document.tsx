@@ -62,6 +62,11 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          <link
+            href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Iceland&display=swap"
+            rel="stylesheet"
+          />
+
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <Script
             strategy="afterInteractive"

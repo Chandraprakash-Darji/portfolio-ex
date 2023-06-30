@@ -6,6 +6,9 @@
   * {
     @apply outline-dashed outline-1 outline-primary/20;
   }
+  .v2 * {
+    @apply outline-none;
+  }
 
   html,
   body {
@@ -21,6 +24,9 @@
     background-size: 20px 20px;
     background-repeat: repeat;
     scroll-padding-top: 128px;
+  }
+  .layout {
+    @apply mx-auto w-11/12 max-w-[90rem];
   }
 }
 
